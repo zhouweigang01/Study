@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="THU.LabSystemBE.DeviceMap,THU.LabSystemBE" table="T_LAB_DEVICE_MAP" dynamic-insert="true" dynamic-update="true">
+    <cache usage="read-write" />
+    <id name="ID" column="F_ID" type="Int64">
+      <generator class="assigned" />
+    </id>
+    <version name="SysVersion" column="F_SYSVERSION" type="integer" unsaved-value="0" />
+    <many-to-one name="House" column="F_HOUSE" not-null="true" class="THU.LabSystemBE.CommonEnum,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_MAP_House_CommonEnum" />
+    <property name="SN" column="F_SN" type="String" length="100" />
+    <property name="DeviceStatus" column="F_DEVICESTATUS" type="THU.LabSystemBE.DeviceStatusEnum,THU.LabSystemBE" />
+    <property name="UseStatus" column="F_USESTATUS" type="THU.LabSystemBE.UseStatusEnum,THU.LabSystemBE" />
+    <property name="Price" column="F_PRICE" type="Decimal" />
+    <property name="Expression" column="F_EXPRESSION" type="String" length="100" />
+    <property name="IsDelete" column="F_ISDELETE" type="Boolean" />
+    <many-to-one name="Device" column="F_DEVICE" not-null="true" class="THU.LabSystemBE.Device,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_MAP_Device_Device" />
+  </class>
+</hibernate-mapping>

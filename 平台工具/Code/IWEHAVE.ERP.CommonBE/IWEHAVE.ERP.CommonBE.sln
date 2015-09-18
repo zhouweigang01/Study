@@ -1,0 +1,26 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{b88bf757-4fa0-40f8-9759-6cca416a2d48}") = "IWEHAVE.ERP.CommonBE.Deploy", "Deploy\IWEHAVE.ERP.CommonBE.Deploy.csproj ", "{B7CF6398-DEDC-49AD-9315-F8A54989E745}"
+EndProject
+Project("{746d570e-4b5d-47c8-91a9-31c0b0b075ba}") = "IWEHAVE.ERP.CommonBE", "BE\IWEHAVE.ERP.CommonBE.csproj ", "{C66DD8CC-D01F-46A6-A328-A697D0C4A9CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7CF6398-DEDC-49AD-9315-F8A54989E745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{B7CF6398-DEDC-49AD-9315-F8A54989E745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{B7CF6398-DEDC-49AD-9315-F8A54989E745}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+{B7CF6398-DEDC-49AD-9315-F8A54989E745}.Release|Any CPU.Build.0 = Debug|Any CPU
+{C66DD8CC-D01F-46A6-A328-A697D0C4A9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{C66DD8CC-D01F-46A6-A328-A697D0C4A9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{C66DD8CC-D01F-46A6-A328-A697D0C4A9CC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+{C66DD8CC-D01F-46A6-A328-A697D0C4A9CC}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+

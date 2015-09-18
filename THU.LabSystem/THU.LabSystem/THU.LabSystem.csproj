@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76AF6B11-7597-45E6-BB7B-82C80CFEF416}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>THU.LabSystem</RootNamespace>
+    <AssemblyName>THU.LabSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\平台工具\Runtime\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\平台工具\Runtime\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\平台工具\Runtime\NPOI\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\平台工具\Runtime\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="IWEHAVE.ERP.CommonBE.Deploy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\平台工具\ApplicationLib\IWEHAVE.ERP.CommonBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\平台工具\Runtime\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\平台工具\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHExt.Runtime">
+      <HintPath>..\..\平台工具\Runtime\NHExt.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\平台工具\Runtime\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\平台工具\Runtime\NPOI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\平台工具\Runtime\NPOI\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\平台工具\Runtime\NPOI\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\平台工具\Runtime\NPOI\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\平台工具\Runtime\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Web.Helpers" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="THU.LabSystemBE.Deploy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\平台工具\ApplicationLib\THU.LabSystemBE.Deploy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminConsoleController.cs" />
+    <Compile Include="Areas\User\Controllers\UserConsoleController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="AuthExt\AuthExtCookie.cs" />
+    <Compile Include="AuthExt\RoleAuthAttribute.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationLib\THU.LabSystemBE.Deploy.dll" />
+    <Content Include="ApplicationLib\THU.LabSystemBE.Deploy.pdb" />
+    <Content Include="ApplicationLib\THU.LabSystemBE.dll" />
+    <Content Include="ApplicationLib\THU.LabSystemBE.pdb" />
+    <Content Include="ApplicationLib\THU.LabSystemBP.Agent.dll" />
+    <Content Include="ApplicationLib\THU.LabSystemBP.Agent.pdb" />
+    <Content Include="ApplicationLib\THU.LabSystemBP.Deploy.dll" />
+    <Content Include="ApplicationLib\THU.LabSystemBP.Deploy.pdb" />
+    <Content Include="ApplicationLib\THU.LabSystemBP.dll" />
+    <Content Include="ApplicationLib\THU.LabSystemBP.pdb" />
+    <Content Include="ApplicationLib\THU.LabSystemBP.svc" />
+    <Content Include="Areas\Script\Admin\AdminConsole\CommonEnum.js" />
+    <Content Include="Areas\Script\Admin\AdminConsole\DeviceAppoint.js" />
+    <Content Include="Areas\Script\Admin\AdminConsole\DeviceList.js" />
+    <Content Include="Areas\Script\Admin\AdminConsole\Portal.js" />
+    <Content Include="Areas\Script\Admin\AdminConsole\RepairDeviceReport.js" />
+    <Content Include="Areas\Script\Admin\AdminConsole\TeacherList.js" />
+    <Content Include="Areas\Script\Admin\AdminConsole\UseDeviceReport.js" />
+    <Content Include="Areas\Script\Admin\AdminConsole\UserList.js" />
+    <Content Include="Areas\Script\User\UserConsole\DeviceApply.js" />
+    <Content Include="Areas\Script\User\UserConsole\DeviceAppoint.js" />
+    <Content Include="Areas\Script\User\UserConsole\Portal.js" />
+    <Content Include="calendar\fullcalendar.css" />
+    <Content Include="calendar\fullcalendar.js" />
+    <Content Include="calendar\fullcalendar.min.css" />
+    <Content Include="calendar\fullcalendar.min.js" />
+    <Content Include="calendar\fullcalendar.print.css" />
+    <Content Include="calendar\gcal.js" />
+    <Content Include="calendar\lang-all.js" />
+    <Content Include="calendar\lib\jquery-ui.custom.min.js" />
+    <Content Include="calendar\lib\jquery.min.js" />
+    <Content Include="calendar\lib\moment.min.js" />
+    <Content Include="Config\LOG_CONFIG.xml" />
+    <Content Include="Config\NH_CONFIG.xml" />
+    <Content Include="Config\RUNTIME_CONFIG.xml" />
+    <Content Include="Content\amcharts\dragIcon.gif" />
+    <Content Include="Content\amcharts\dragIconH.gif" />
+    <Content Include="Content\amcharts\lens.png" />
+    <Content Include="Content\Home\AuthError\AuthError.css" />
+    <Content Include="Content\Home\AuthError\no-auth.png" />
+    <Content Include="Content\portal\top-button-user.png" />
+    <Content Include="Content\Images\btn.gif" />
+    <Content Include="Content\login\bg.png" />
+    <Content Include="Content\login\homebg.png" />
+    <Content Include="Content\login\img.png" />
+    <Content Include="Content\login\login.css" />
+    <Content Include="Content\portal\logo.png" />
+    <Content Include="Content\portal\portal.css" />
+    <Content Include="Content\portal\top-button-cancel.png" />
+    <Content Include="Content\portal\top-button-organize.png" />
+    <Content Include="Content\portal\top-button-password.png" />
+    <Content Include="Content\portal\top-right-bg.png" />
+    <Content Include="Content\themes\default\easyui.css" />
+    <Content Include="Content\themes\default\images\accordion_collapse.png" />
+    <Content Include="Content\themes\default\images\accordion_expand.png" />
+    <Content Include="Content\themes\default\images\blank.gif" />
+    <Content Include="Content\themes\default\images\button_a_bg.gif" />
+    <Content Include="Content\themes\default\images\button_plain_hover.png" />
+    <Content Include="Content\themes\default\images\button_span_bg.gif" />
+    <Content Include="Content\themes\default\images\calendar_nextmonth.gif" />
+    <Content Include="Content\themes\default\images\calendar_nextyear.gif" />
+    <Content Include="Content\themes\default\images\calendar_prevmonth.gif" />
+    <Content Include="Content\themes\default\images\calendar_prevyear.gif" />
+    <Content Include="Content\themes\default\images\combo_arrow.gif" />
+    <Content Include="Content\themes\default\images\datagrid_header_bg.gif" />
+    <Content Include="Content\themes\default\images\datagrid_row_collapse.gif" />
+    <Content Include="Content\themes\default\images\datagrid_row_expand.gif" />
+    <Content Include="Content\themes\default\images\datagrid_sort_asc.gif" />
+    <Content Include="Content\themes\default\images\datagrid_sort_desc.gif" />
+    <Content Include="Content\themes\default\images\datagrid_title_bg.gif" />
+    <Content Include="Content\themes\default\images\datagrid_title_bg.png" />
+    <Content Include="Content\themes\default\images\datebox_arrow.png" />
+    <Content Include="Content\themes\default\images\layout_arrows.png" />
+    <Content Include="Content\themes\default\images\menu.gif" />
+    <Content Include="Content\themes\default\images\menu_downarrow.png" />
+    <Content Include="Content\themes\default\images\menu_rightarrow.png" />
+    <Content Include="Content\themes\default\images\menu_sep.png" />
+    <Content Include="Content\themes\default\images\menu_split_downarrow.png" />
+    <Content Include="Content\themes\default\images\messager_error.gif" />
+    <Content Include="Content\themes\default\images\messager_info.gif" />
+    <Content Include="Content\themes\default\images\messager_question.gif" />
+    <Content Include="Content\themes\default\images\messager_warning.gif" />
+    <Content Include="Content\themes\default\images\pagination_first.gif" />
+    <Content Include="Content\themes\default\images\pagination_last.gif" />
+    <Content Include="Content\themes\default\images\pagination_load.png" />
+    <Content Include="Content\themes\default\images\pagination_loading.gif" />
+    <Content Include="Content\themes\default\images\pagination_next.gif" />
+    <Content Include="Content\themes\default\images\pagination_prev.gif" />
+    <Content Include="Content\themes\default\images\panel_loading.gif" />
+    <Content Include="Content\themes\default\images\panel_title.gif" />
+    <Content Include="Content\themes\default\images\panel_title.png" />
+    <Content Include="Content\themes\default\images\panel_tools.gif" />
+    <Content Include="Content\themes\default\images\searchbox_button.png" />
+    <Content Include="Content\themes\default\images\slider_handle.png" />
+    <Content Include="Content\themes\default\images\spinner_arrow_down.gif" />
+    <Content Include="Content\themes\default\images\spinner_arrow_up.gif" />
+    <Content Include="Content\themes\default\images\tabs_active.png" />
+    <Content Include="Content\themes\default\images\tabs_close.gif" />
+    <Content Include="Content\themes\default\images\tabs_enabled.gif" />
+    <Content Include="Content\themes\default\images\tabs_enabled.png" />
+    <Content Include="Content\themes\default\images\tabs_leftarrow.png" />
+    <Content Include="Content\themes\default\images\tabs_rightarrow.png" />
+    <Content Include="Content\themes\default\images\tree_arrows.gif" />
+    <Content Include="Content\themes\default\images\tree_checkbox_0.gif" />
+    <Content Include="Content\themes\default\images\tree_checkbox_1.gif" />
+    <Content Include="Content\themes\default\images\tree_checkbox_2.gif" />
+    <Content Include="Content\themes\default\images\tree_dnd_no.png" />
+    <Content Include="Content\themes\default\images\tree_dnd_yes.png" />
+    <Content Include="Content\themes\default\images\tree_elbow.png" />
+    <Content Include="Content\themes\default\images\tree_file.gif" />
+    <Content Include="Content\themes\default\images\tree_folder.gif" />
+    <Content Include="Content\themes\default\images\tree_folder_open.gif" />
+    <Content Include="Content\themes\default\images\tree_loading.gif" />
+    <Content Include="Content\themes\default\images\validatebox_pointer.gif" />
+    <Content Include="Content\themes\default\images\validatebox_warning.png" />
+    <Content Include="Content\themes\icon.css" />
+    <Content Include="Content\themes\icons\ammeter.png" />
+    <Content Include="Content\themes\icons\areatheme.png" />
+    <Content Include="Content\themes\icons\arrow_down.png" />
+    <Content Include="Content\themes\icons\arrow_up.png" />
+    <Content Include="Content\themes\icons\attach.png" />
+    <Content Include="Content\themes\icons\back.png" />
+    <Content Include="Content\themes\icons\blank.gif" />
+    <Content Include="Content\themes\icons\bp_key.png" />
+    <Content Include="Content\themes\icons\cancel.png" />
+    <Content Include="Content\themes\icons\clear-trigger.gif" />
+    <Content Include="Content\themes\icons\colordetail.png" />
+    <Content Include="Content\themes\icons\cut.png" />
+    <Content Include="Content\themes\icons\date_next.png" />
+    <Content Include="Content\themes\icons\date_previous.png" />
+    <Content Include="Content\themes\icons\dept.png" />
+    <Content Include="Content\themes\icons\download.png" />
+    <Content Include="Content\themes\icons\earth.png" />
+    <Content Include="Content\themes\icons\edit_add.png" />
+    <Content Include="Content\themes\icons\edit_remove.png" />
+    <Content Include="Content\themes\icons\edit_remove1.png" />
+    <Content Include="Content\themes\icons\entity.png" />
+    <Content Include="Content\themes\icons\enum.png" />
+    <Content Include="Content\themes\icons\excel.png" />
+    <Content Include="Content\themes\icons\fee.png" />
+    <Content Include="Content\themes\icons\filesave.png" />
+    <Content Include="Content\themes\icons\flag_green.png" />
+    <Content Include="Content\themes\icons\flag_red.png" />
+    <Content Include="Content\themes\icons\folder.gif" />
+    <Content Include="Content\themes\icons\form.png" />
+    <Content Include="Content\themes\icons\green_star.png" />
+    <Content Include="Content\themes\icons\group_auth.png" />
+    <Content Include="Content\themes\icons\help.png" />
+    <Content Include="Content\themes\icons\list.png" />
+    <Content Include="Content\themes\icons\lock.png" />
+    <Content Include="Content\themes\icons\MapEntire.png" />
+    <Content Include="Content\themes\icons\MapPan.png" />
+    <Content Include="Content\themes\icons\MapRefresh.png" />
+    <Content Include="Content\themes\icons\MapSelect.png" />
+    <Content Include="Content\themes\icons\MapZoomIn.png" />
+    <Content Include="Content\themes\icons\MapZoomOut.png" />
+    <Content Include="Content\themes\icons\menu.png" />
+    <Content Include="Content\themes\icons\merchant.png" />
+    <Content Include="Content\themes\icons\mini_add.png" />
+    <Content Include="Content\themes\icons\mini_edit.png" />
+    <Content Include="Content\themes\icons\mini_refresh.png" />
+    <Content Include="Content\themes\icons\money.png" />
+    <Content Include="Content\themes\icons\move.png" />
+    <Content Include="Content\themes\icons\no.png" />
+    <Content Include="Content\themes\icons\odFee.png" />
+    <Content Include="Content\themes\icons\odM.png" />
+    <Content Include="Content\themes\icons\ok.png" />
+    <Content Include="Content\themes\icons\open.png" />
+    <Content Include="Content\themes\icons\org.png" />
+    <Content Include="Content\themes\icons\org_list.png" />
+    <Content Include="Content\themes\icons\page_key.png" />
+    <Content Include="Content\themes\icons\page_refresh.png" />
+    <Content Include="Content\themes\icons\pencil.png" />
+    <Content Include="Content\themes\icons\print.png" />
+    <Content Include="Content\themes\icons\project.png" />
+    <Content Include="Content\themes\icons\property.png" />
+    <Content Include="Content\themes\icons\P_1.png" />
+    <Content Include="Content\themes\icons\P_2.png" />
+    <Content Include="Content\themes\icons\redo.png" />
+    <Content Include="Content\themes\icons\red_star.png" />
+    <Content Include="Content\themes\icons\reload.png" />
+    <Content Include="Content\themes\icons\role.gif" />
+    <Content Include="Content\themes\icons\ruler1.png" />
+    <Content Include="Content\themes\icons\ruler2.png" />
+    <Content Include="Content\themes\icons\search-trigger.gif" />
+    <Content Include="Content\themes\icons\search.png" />
+    <Content Include="Content\themes\icons\square.png" />
+    <Content Include="Content\themes\icons\station.gif" />
+    <Content Include="Content\themes\icons\store.png" />
+    <Content Include="Content\themes\icons\sum.png" />
+    <Content Include="Content\themes\icons\themepro.png" />
+    <Content Include="Content\themes\icons\tip.png" />
+    <Content Include="Content\themes\icons\tree_file.gif" />
+    <Content Include="Content\themes\icons\tree_folder.gif" />
+    <Content Include="Content\themes\icons\tree_folder_open.gif" />
+    <Content Include="Content\themes\icons\undo.png" />
+    <Content Include="Content\themes\icons\unique.png" />
+    <Content Include="Content\themes\icons\upload.png" />
+    <Content Include="Content\themes\icons\user.png" />
+    <Content Include="Content\themes\icons\wait.gif" />
+    <Content Include="Content\themes\icons\water.png" />
+    <Content Include="Content\themes\icons\weather_clouds.png" />
+    <Content Include="Content\themes\icons\weather_rain.png" />
+    <Content Include="Content\themes\icons\weather_snow.png" />
+    <Content Include="Content\themes\icons\weather_sun.png" />
+    <Content Include="Content\themes\jquery.portal.css" />
+    <Content Include="Content\themes\public.css" />
+    <Content Include="Global.asax" />
+    <Content Include="qtip\jquery.qtip.min.css" />
+    <Content Include="qtip\jquery.qtip.min.js" />
+    <Content Include="Scripts\amcharts.js" />
+    <Content Include="Scripts\DialogManager.js" />
+    <Content Include="Scripts\EasyUIExtend.js" />
+    <Content Include="Scripts\EasyUIHelper.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery.easydrag.handler.beta2.js" />
+    <Content Include="Scripts\jquery.easydrag.js" />
+    <Content Include="Scripts\jquery.easyui.min.js" />
+    <Content Include="Scripts\jquery.parser.js" />
+    <Content Include="Scripts\jquery.portal.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jqueryJSON.js" />
+    <Content Include="Scripts\public.js" />
+    <Content Include="Scripts\Home\Main.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\User\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\AdminConsole\Main.cshtml" />
+    <Content Include="Areas\User\Views\UserConsole\Main.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminConsole\CommonEnum.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminConsole\UserList.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminConsole\TeacherList.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminConsole\DeviceList.cshtml" />
+    <Content Include="Areas\User\Views\UserConsole\DeviceApply.cshtml" />
+    <Content Include="Areas\User\Views\UserConsole\DeviceAppoint.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminConsole\RepairDeviceReport.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminConsole\UseDeviceReport.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminConsole\DeviceAppoint.cshtml" />
+    <None Include="Content\themes\default\images\Thumbs.db" />
+    <Content Include="Views\Home\AuthError.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutC.cshtml" />
+    <Content Include="Views\Home\LogOn.cshtml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2441</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

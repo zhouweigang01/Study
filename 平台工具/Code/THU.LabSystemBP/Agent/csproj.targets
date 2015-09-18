@@ -1,0 +1,76 @@
+<Project DefaultTargets = "Compile"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <ItemGroup>
+    <Reference Include="NHExt.Runtime">
+<HintPath>..\..\..\Runtime\NHExt.Runtime.dll</HintPath>
+</Reference>
+<Reference Include="log4net">
+<HintPath>..\..\..\Runtime\log4net.dll</HintPath>
+</Reference>
+<Reference Include="THU.LabSystemBE.Deploy">
+<HintPath>..\..\..\ApplicationLib\THU.LabSystemBE.Deploy.dll</HintPath>
+</Reference>
+<Reference Include="THU.LabSystemBP.Deploy">
+<HintPath>..\..\..\ApplicationLib\THU.LabSystemBP.Deploy.dll</HintPath>
+</Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Proxy\InsertUserBPAgent.cs" />
+<Compile Include="Proxy\GetUserListBPAgent.cs" />
+<Compile Include="Proxy\ModifyUserBPAgent.cs" />
+<Compile Include="Proxy\DeleteUserBPAgent.cs" />
+<Compile Include="Proxy\ChangePasswordBPAgent.cs" />
+<Compile Include="Proxy\InsertEnumBPAgent.cs" />
+<Compile Include="Proxy\ModifyEnumBPAgent.cs" />
+<Compile Include="Proxy\DeleteEnumBPAgent.cs" />
+<Compile Include="Proxy\GetEnumListBPAgent.cs" />
+<Compile Include="Proxy\ValidateUserBPAgent.cs" />
+<Compile Include="Proxy\GetGroupEnumListBPAgent.cs" />
+<Compile Include="Proxy\GetTeacherListBPAgent.cs" />
+<Compile Include="Proxy\InsertTeacherBPAgent.cs" />
+<Compile Include="Proxy\ModifyTeacherBPAgent.cs" />
+<Compile Include="Proxy\DeleteTeacherBPAgent.cs" />
+<Compile Include="Proxy\SearchTeacherListBPAgent.cs" />
+<Compile Include="Proxy\SearchUserListBPAgent.cs" />
+<Compile Include="Proxy\GetDeviceListBPAgent.cs" />
+<Compile Include="Proxy\InsertDeviceBPAgent.cs" />
+<Compile Include="Proxy\ModifyDeviceBPAgent.cs" />
+<Compile Include="Proxy\DeleteDeviceBPAgent.cs" />
+<Compile Include="Proxy\GetDeviceMapListBPAgent.cs" />
+<Compile Include="Proxy\InsertDeviceMapBPAgent.cs" />
+<Compile Include="Proxy\ModifyDeviceMapBPAgent.cs" />
+<Compile Include="Proxy\DeleteDeviceMapBPAgent.cs" />
+<Compile Include="Proxy\SearchDeviceListBPAgent.cs" />
+<Compile Include="Proxy\SearchEnumListBPAgent.cs" />
+<Compile Include="Proxy\ApplyRepairBPAgent.cs" />
+<Compile Include="Proxy\RepairCompleteBPAgent.cs" />
+<Compile Include="Proxy\DiscardDeviceBPAgent.cs" />
+<Compile Include="Proxy\ApplyDeviceBPAgent.cs" />
+<Compile Include="Proxy\AppointDeviceBPAgent.cs" />
+<Compile Include="Proxy\GetLoggerListBPAgent.cs" />
+<Compile Include="Proxy\SearchDeviceMapListBPAgent.cs" />
+<Compile Include="Proxy\LoadDeviceMapRecordListBPAgent.cs" />
+<Compile Include="Proxy\GetDeviceMapByHouseBPAgent.cs" />
+<Compile Include="Proxy\GetAllDeviceMapBPAgent.cs" />
+<Compile Include="Proxy\HandleRepairBPAgent.cs" />
+<Compile Include="Proxy\GetDeviceRepairRecordBPAgent.cs" />
+<Compile Include="Proxy\UseCompleteBPAgent.cs" />
+<Compile Include="Proxy\DeleteAppointBPAgent.cs" />
+<Compile Include="Proxy\AjustAppointBPAgent.cs" />
+<Compile Include="Proxy\SynDeviceMapBPAgent.cs" />
+<Compile Include="Proxy\GetDeviceUseRecordBPAgent.cs" />
+<Compile Include="Proxy\ModifyRepairAlarmBPAgent.cs" />
+<Compile Include="Proxy\GetDeviceUseReportBPAgent.cs" />
+<Compile Include="Proxy\GetDeviceRepairReportBPAgent.cs" />
+<Compile Include="Proxy\LoadDeviceUseDiagramBPAgent.cs" />
+<Compile Include="Proxy\InsertForbitBPAgent.cs" />
+<Compile Include="Proxy\ModifyForbitBPAgent.cs" />
+<Compile Include="Proxy\DeleteForbitBPAgent.cs" />
+<Compile Include="Proxy\GetForbitListBPAgent.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    
+  </ItemGroup>
+</Project>

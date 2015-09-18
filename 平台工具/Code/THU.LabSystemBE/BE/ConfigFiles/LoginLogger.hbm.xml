@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="THU.LabSystemBE.LoginLogger,THU.LabSystemBE" table="T_LAB_LOGIN_LOGGER" dynamic-insert="true" dynamic-update="true">
+    <cache usage="read-write" />
+    <id name="ID" column="F_ID" type="Int64">
+      <generator class="assigned" />
+    </id>
+    <version name="SysVersion" column="F_SYSVERSION" type="integer" unsaved-value="0" />
+    <property name="User" column="F_USER" type="Int64" />
+    <property name="Name" column="F_NAME" type="String" length="100" />
+    <property name="IP" column="F_IP" type="String" length="100" />
+    <property name="Success" column="F_SUCCESS" type="Boolean" />
+    <property name="ErrorMsg" column="F_ERRORMSG" type="String" length="200" />
+    <property name="LoginDate" column="F_LOGINDATE" type="DateTime" />
+  </class>
+</hibernate-mapping>

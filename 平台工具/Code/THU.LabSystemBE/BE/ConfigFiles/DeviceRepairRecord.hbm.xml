@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="THU.LabSystemBE.DeviceRepairRecord,THU.LabSystemBE" table="T_LAB_DEVICE_REPAIR_RECORD" dynamic-insert="true" dynamic-update="true">
+    <cache usage="read-write" />
+    <id name="ID" column="F_ID" type="Int64">
+      <generator class="assigned" />
+    </id>
+    <version name="SysVersion" column="F_SYSVERSION" type="integer" unsaved-value="0" />
+    <many-to-one name="Device" column="F_DEVICE" not-null="true" class="THU.LabSystemBE.DeviceMap,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_REPAIR_RECORD_Device_DeviceMap" />
+    <many-to-one name="User" column="F_USER" not-null="true" class="THU.LabSystemBE.User,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_REPAIR_RECORD_User_User" />
+    <many-to-one name="Teacher" column="F_TEACHER" not-null="false" class="THU.LabSystemBE.Teacher,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_REPAIR_RECORD_Teacher_Teacher" />
+    <property name="ReportDate" column="F_REPORTDATE" type="DateTime" />
+    <property name="IsCompleted" column="F_ISCOMPLETED" type="Boolean" />
+    <property name="CompleteDate" column="F_COMPLETEDATE" type="DateTime" />
+    <many-to-one name="CompleteUser" column="F_COMPLETEUSER" not-null="false" class="THU.LabSystemBE.User,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_REPAIR_RECORD_CompleteUser_User" />
+    <property name="Fee" column="F_FEE" type="Decimal" />
+    <property name="ReportMemo" column="F_REPORTMEMO" type="String" length="200" />
+    <property name="RepairDate" column="F_REPAIRDATE" type="DateTime" />
+    <property name="AlarmUser" column="F_ALARMUSER" type="Boolean" />
+    <many-to-one name="House" column="F_HOUSE" not-null="true" class="THU.LabSystemBE.CommonEnum,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_REPAIR_RECORD_House_CommonEnum" />
+  </class>
+</hibernate-mapping>

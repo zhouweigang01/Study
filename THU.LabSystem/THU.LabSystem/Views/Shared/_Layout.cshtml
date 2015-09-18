@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/themes/default/easyui.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/public.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.easyui.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jqueryJSON.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/EasyUIHelper.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/EasyUIExtend.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/public.js")" type="text/javascript"></script>
+    <style type="text/css">
+        .tree-node
+        {
+            height: 25px;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            color: #00a;
+        }
+        .tree-node .tree-file
+        {
+            height: 25px;
+            background-position-y: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        //        $(document).ready(function () {
+        //            $(document).bind("keydown", function (e) {
+        //                e = window.event || e;
+        //                if (e.keyCode == 116) {
+        //                    e.keyCode = 0;
+        //                    return false;
+        //                }
+        //            });
+        //        }); 
+    </script>
+    @RenderSection("Head", false)
+</head>
+<body class="easyui-layout">
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "没有权限";
+}
+@section Head{
+    <link href="/Content/Home/AuthError/AuthError.css" rel="stylesheet" type="text/css" />
+    @if (!string.IsNullOrEmpty(ViewBag.Url))
+    {
+        <script type="text/javascript">
+            setTimeout(function () {
+                top.location.href = "@ViewBag.Url";
+            }, 5000);
+        </script>
+      
+    }
+}
+<div data-options="region:'center',border:false,fit:true">
+    <div class="easyui-panel" iconcls="icon-menu" data-options="region:'center',fit:true">
+        <div class="authInfo">
+        </div>
+        @if (!string.IsNullOrEmpty(ViewBag.Url))
+        {
+            <div class="cus-link">
+                没有权限，五秒钟后自动跳转<a href="@ViewBag.Url">立即跳转</a></div>
+   
+        }
+    </div>
+</div>
+<div>
+</div>

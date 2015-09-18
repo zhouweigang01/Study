@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="THU.LabSystemBE.User,THU.LabSystemBE" table="T_LAB_USER" dynamic-insert="true" dynamic-update="true">
+    <cache usage="read-write" />
+    <id name="ID" column="F_ID" type="Int64">
+      <generator class="assigned" />
+    </id>
+    <version name="SysVersion" column="F_SYSVERSION" type="integer" unsaved-value="0" />
+    <property name="SN" column="F_SN" type="String" length="100" />
+    <property name="Name" column="F_NAME" type="String" length="100" />
+    <property name="Tel" column="F_TEL" type="String" length="100" />
+    <property name="Password" column="F_PASSWORD" type="String" length="100" />
+    <many-to-one name="Degree" column="F_DEGREE" not-null="false" class="THU.LabSystemBE.CommonEnum,THU.LabSystemBE" foreign-key="FK_T_LAB_USER_Degree_CommonEnum" />
+    <many-to-one name="Status" column="F_STATUS" not-null="false" class="THU.LabSystemBE.CommonEnum,THU.LabSystemBE" foreign-key="FK_T_LAB_USER_Status_CommonEnum" />
+    <property name="Type" column="F_TYPE" type="THU.LabSystemBE.UserTypeEnum,THU.LabSystemBE" />
+    <property name="Email" column="F_EMAIL" type="String" length="100" />
+    <property name="Code" column="F_CODE" type="String" length="100" />
+    <property name="IsDelete" column="F_ISDELETE" type="Boolean" />
+    <property name="BeginTime" column="F_BEGINTIME" type="DateTime" />
+    <property name="EndTime" column="F_ENDTIME" type="DateTime" />
+    <many-to-one name="Teacher" column="F_TEACHER" not-null="false" class="THU.LabSystemBE.Teacher,THU.LabSystemBE" foreign-key="FK_T_LAB_USER_Teacher_Teacher" />
+  </class>
+</hibernate-mapping>

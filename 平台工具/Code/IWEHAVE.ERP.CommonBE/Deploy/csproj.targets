@@ -1,0 +1,21 @@
+<Project DefaultTargets = "Compile"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <ItemGroup>
+    <Reference Include="NHExt.Runtime">
+<HintPath>..\..\..\Runtime\NHExt.Runtime.dll</HintPath>
+</Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\BizEntityDTO.cs" />
+<Compile Include="Entity\BizTreeEntityDTO.cs" />
+<Compile Include="Entity\FieldDTO.cs" />
+<Compile Include="Entity\EntityExDTO.cs" />
+<Compile Include="Entity\CommonEntityDTO.cs" />
+<Compile Include="Entity\CommonEntityExDTO.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    
+  </ItemGroup>
+</Project>

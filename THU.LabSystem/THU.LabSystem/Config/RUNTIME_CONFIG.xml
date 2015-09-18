@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RuntimeConfig>
+  <AuthCfg>
+    <!--IsDataAuth是否启用数据权限,IsEnableCache是否启用数据权限缓存-->
+    <DataAuthCfg IsDataAuth="false"/>
+    <!--是否启用UI权限校验-->
+    <UIAuthCfg IsUIAuth="false" />
+  </AuthCfg>
+  <Server ServiceUrl="http://www.gaia.asia/service.ashx"/>
+</RuntimeConfig>
+

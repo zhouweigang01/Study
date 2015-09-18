@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "主页";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+    <link href='/calendar/fullcalendar.css' rel='stylesheet' />
+    <link href='/calendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='/calendar/lib/moment.min.js'></script>
+    <script src='/calendar/fullcalendar.js'></script>
+    <script src='/calendar/lang-all.js'></script>
+    <link href="/Content/portal/portal.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/amcharts.js" type="text/javascript"></script>
+    <link href="/Content/portal/portal.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/Home/Main.js" type="text/javascript"></script>
+}
+<div region="north" border="false" style="height: 60px; background: rgb(228, 237, 254);">
+    <a class="logo" href="/">
+        <img src="/Content/portal/logo.png" width="150" height="45" style="border: 0;" /></a><span
+            style="margin: 20px 0px; font-size: large; font-weight: bold;">土木工程系实验室管理系统
+    </span>
+    <div class="copyright">
+        版权所有 © 清华大学土木工程系</div>
+    <div class="top-right">
+        <div class="top-text">
+            <span class="user"></span><a href="/Home/Logon" target="_self">用户登录</a>
+        </div>
+    </div>
+</div>
+<div region="center" style="position: relative;">
+    <div class="tab_box">
+        <div class="lyz_tab_left">
+            <div class="pro_con">
+                <ul>
+                    <li class="hover" target="con_one_1">在用设备</li>
+                    <li target="con_one_2">预约设备</li>
+                    <li target="con_one_3">报修设备</li>
+                </ul>
+            </div>
+        </div>
+        <div class="lyz_tab_right">
+            <div id="con_one_1">
+                <div class="easyui-layout" data-options="fit:true">
+                    <div region="center" border="false" style="overflow-x: hidden;">
+                        <table id="applyDeviceList" class="easyui-datagrid" data-options="fit:true,border:false"
+                            pagination="true">
+                        </table>
+                    </div>
+                    <div region="south" border="false" style="overflow-x: hidden; height: 300px" title="使用统计">
+                        <div id="chartdiv" style="width: 100%; height: 240px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="con_one_2" style="display: none;">
+                <div class="easyui-layout" data-options="fit:true">
+                    <div region="center" border="false" style="overflow-x: hidden;">
+                        <table id="appointDeviceList" class="easyui-datagrid" data-options="fit:true,border:false"
+                            pagination="true">
+                        </table>
+                    </div>
+                    <div region="south" border="false" style="overflow-x: hidden; height: 400px" title="预约统计">
+                        <div id='calendar' style="width: 90%; margin: 5px auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="con_one_3" style="display: none;">
+                <div class="easyui-layout" data-options="fit:true">
+                    <div region="center" border="false" style="overflow-x: hidden;">
+                        <table id="repairDeviceList" class="easyui-datagrid" data-options="fit:true,border:false"
+                            pagination="true">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="viewAppointForm" class="easyui-dialog" title="预约明细" iconcls="icon-save">
+    <table id="viewAppointList" class="easyui-datagrid" style="width: 700px; height: 400px">
+    </table>
+</div>

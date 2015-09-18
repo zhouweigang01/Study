@@ -1,0 +1,37 @@
+<Project DefaultTargets = "Compile"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <ItemGroup>
+    <Reference Include="NHExt.Runtime">
+<HintPath>..\..\..\Runtime\NHExt.Runtime.dll</HintPath>
+</Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\UserDTO.cs" />
+<Compile Include="Entity\CommonEnumDTO.cs" />
+<Compile Include="Entity\TeacherDTO.cs" />
+<Compile Include="Entity\DeviceMapDTO.cs" />
+<Compile Include="Entity\DeviceUseRecordDTO.cs" />
+<Compile Include="Entity\DeviceDTO.cs" />
+<Compile Include="Entity\LoginLoggerDTO.cs" />
+<Compile Include="Entity\DeviceRepairRecordDTO.cs" />
+<Compile Include="Entity\DeviceLogDTO.cs" />
+<Compile Include="Entity\UserExDTO.cs" />
+<Compile Include="Entity\GroupEnumDTO.cs" />
+<Compile Include="Entity\DeviceExDTO.cs" />
+<Compile Include="Entity\LoggerExDTO.cs" />
+<Compile Include="Entity\DeviceMapExDTO.cs" />
+<Compile Include="Entity\DeviceRepairExDTO.cs" />
+<Compile Include="Entity\DeviceUseExDTO.cs" />
+<Compile Include="Entity\TypeEnumDTO.cs" />
+<Compile Include="Entity\UserTypeEnumDTO.cs" />
+<Compile Include="Entity\DeviceTypeEnumDTO.cs" />
+<Compile Include="Entity\DeviceStatusEnumDTO.cs" />
+<Compile Include="Entity\UseStatusEnumDTO.cs" />
+<Compile Include="Entity\SexEnumDTO.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    
+  </ItemGroup>
+</Project>

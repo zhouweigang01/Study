@@ -1,0 +1,82 @@
+<Project DefaultTargets = "Compile"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <ItemGroup>
+    <Reference Include="NHExt.Runtime">
+<HintPath>..\..\..\Runtime\NHExt.Runtime.dll</HintPath>
+</Reference>
+<Reference Include="log4net">
+<HintPath>..\..\..\Runtime\log4net.dll</HintPath>
+</Reference>
+<Reference Include="NHibernate">
+<HintPath>..\..\..\Runtime\NHibernate.dll</HintPath>
+</Reference>
+<Reference Include="THU.LabSystemBE">
+<HintPath>..\..\..\ApplicationLib\THU.LabSystemBE.dll</HintPath>
+</Reference>
+<Reference Include="THU.LabSystemBE.Deploy">
+<HintPath>..\..\..\ApplicationLib\THU.LabSystemBE.Deploy.dll</HintPath>
+</Reference>
+<Reference Include="THU.LabSystemBP.Deploy">
+<HintPath>..\..\..\ApplicationLib\THU.LabSystemBP.Deploy.dll</HintPath>
+</Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BPEntity\InsertUserBP.cs" />
+<Compile Include="BPEntity\GetUserListBP.cs" />
+<Compile Include="BPEntity\ModifyUserBP.cs" />
+<Compile Include="BPEntity\DeleteUserBP.cs" />
+<Compile Include="BPEntity\ChangePasswordBP.cs" />
+<Compile Include="BPEntity\InsertEnumBP.cs" />
+<Compile Include="BPEntity\ModifyEnumBP.cs" />
+<Compile Include="BPEntity\DeleteEnumBP.cs" />
+<Compile Include="BPEntity\GetEnumListBP.cs" />
+<Compile Include="BPEntity\ValidateUserBP.cs" />
+<Compile Include="BPEntity\GetGroupEnumListBP.cs" />
+<Compile Include="BPEntity\GetTeacherListBP.cs" />
+<Compile Include="BPEntity\InsertTeacherBP.cs" />
+<Compile Include="BPEntity\ModifyTeacherBP.cs" />
+<Compile Include="BPEntity\DeleteTeacherBP.cs" />
+<Compile Include="BPEntity\SearchTeacherListBP.cs" />
+<Compile Include="BPEntity\SearchUserListBP.cs" />
+<Compile Include="BPEntity\GetDeviceListBP.cs" />
+<Compile Include="BPEntity\InsertDeviceBP.cs" />
+<Compile Include="BPEntity\ModifyDeviceBP.cs" />
+<Compile Include="BPEntity\DeleteDeviceBP.cs" />
+<Compile Include="BPEntity\GetDeviceMapListBP.cs" />
+<Compile Include="BPEntity\InsertDeviceMapBP.cs" />
+<Compile Include="BPEntity\ModifyDeviceMapBP.cs" />
+<Compile Include="BPEntity\DeleteDeviceMapBP.cs" />
+<Compile Include="BPEntity\SearchDeviceListBP.cs" />
+<Compile Include="BPEntity\SearchEnumListBP.cs" />
+<Compile Include="BPEntity\ApplyRepairBP.cs" />
+<Compile Include="BPEntity\RepairCompleteBP.cs" />
+<Compile Include="BPEntity\DiscardDeviceBP.cs" />
+<Compile Include="BPEntity\ApplyDeviceBP.cs" />
+<Compile Include="BPEntity\AppointDeviceBP.cs" />
+<Compile Include="BPEntity\GetLoggerListBP.cs" />
+<Compile Include="BPEntity\SearchDeviceMapListBP.cs" />
+<Compile Include="BPEntity\LoadDeviceMapRecordListBP.cs" />
+<Compile Include="BPEntity\GetDeviceMapByHouseBP.cs" />
+<Compile Include="BPEntity\GetAllDeviceMapBP.cs" />
+<Compile Include="BPEntity\HandleRepairBP.cs" />
+<Compile Include="BPEntity\GetDeviceRepairRecordBP.cs" />
+<Compile Include="BPEntity\UseCompleteBP.cs" />
+<Compile Include="BPEntity\DeleteAppointBP.cs" />
+<Compile Include="BPEntity\AjustAppointBP.cs" />
+<Compile Include="BPEntity\SynDeviceMapBP.cs" />
+<Compile Include="BPEntity\GetDeviceUseRecordBP.cs" />
+<Compile Include="BPEntity\ModifyRepairAlarmBP.cs" />
+<Compile Include="BPEntity\GetDeviceUseReportBP.cs" />
+<Compile Include="BPEntity\GetDeviceRepairReportBP.cs" />
+<Compile Include="BPEntity\LoadDeviceUseDiagramBP.cs" />
+<Compile Include="BPEntity\InsertForbitBP.cs" />
+<Compile Include="BPEntity\ModifyForbitBP.cs" />
+<Compile Include="BPEntity\DeleteForbitBP.cs" />
+<Compile Include="BPEntity\GetForbitListBP.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    
+  </ItemGroup>
+</Project>

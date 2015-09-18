@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "使用设备";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+    <script src="/Areas/Script/User/UserConsole/DeviceApply.js" type="text/javascript"></script>
+    <style type="text/css">
+        a.btn
+        {
+            background: url(/Content/images/btn.gif) left 0;
+            color: #fff;
+            text-decoration: none;
+            height: 30px;
+            float: left;
+            cursor: pointer;
+            margin: 0 5px 0 0;
+        }
+        a.btn-disable
+        {
+            background: url(/Content/images/btn.gif) left -30px;
+            cursor: default;
+        }
+        
+        a.btn span
+        {
+            background: url(/Content/images/btn.gif) right 0;
+            padding: 5px 8px 5px 0;
+            margin: 0 0 0 8px;
+            float: left;
+            height: 16px;
+        }
+        a.btn-disable span
+        {
+            background: url(/Content/images/btn.gif) right -30px;
+            color: #000;
+            padding: 5px 8px 5px 0;
+            margin: 0 0 0 8px;
+            height: 16px;
+        }
+    </style>
+}
+<div data-options="region:'center'">
+    <table id="deviceList" class="easyui-datagrid" iconcls="icon-user" pagination="true"
+        data-options="fit:true,border:false">
+    </table>
+</div>

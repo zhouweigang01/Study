@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "设备列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+    <script src="/Areas/Script/Admin/AdminConsole/DeviceList.js" type="text/javascript"></script>
+}
+<div data-options="region:'west',width:0.4,split:true" title="设备列表">
+    <table id="deviceList" class="easyui-datagrid" iconcls="icon-list" pagination="true"
+        data-options="fit:true,border:false">
+    </table>
+</div>
+<div data-options="region:'center'" title="实验室设备">
+    <table id="deviceMapList" class="easyui-datagrid" iconcls="icon-list" data-options="fit:true,border:false">
+    </table>
+</div>
+<!--编辑界面-->
+<div id="editForm" class="easyui-dialog" title="新增设备" iconcls="icon-save">
+    <table style="padding: 10px;">
+        <tr>
+            <td class="label-t">
+                设备名称
+            </td>
+            <td>
+                <input id="txtName" type="text" class="easyui-validatebox" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                设备类型
+            </td>
+            <td>
+                <select id="txtType" class="easyui-combobox" style="width: 180px" panelheight="60"
+                    editable="false">
+                    <option value="1" selected="selected">单用户</option>
+                    <option value="2">多用户</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                设备单价
+            </td>
+            <td>
+                <input id="txtPrice" type="text" class="easyui-numberbox" data-options="min:0,precision:2,required:true"
+                    style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                计费公式
+            </td>
+            <td>
+                <input id="txtExpression" type="text" class="easyui-validatebox" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t" colspan="2">
+                <div style="color: #f00; font-weight: bold;">
+                    *计算公式参数定义
+                </div>
+                <div style="color: #f00; font-weight: bold;">
+                    Price（设备单价）
+                </div>
+                <div style="color: #f00; font-weight: bold;">
+                    Day（天数），Days(合计天数)
+                </div>
+                <div style="color: #f00; font-weight: bold;">
+                    Hour（小时数），Hours（合计小时数）
+                </div>
+                <div style="color: #f00; font-weight: bold;">
+                    Minute（分钟数），Minutes（合计分钟数）
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="editMapForm" class="easyui-dialog" title="新增实验室设备" iconcls="icon-save">
+    <table style="padding: 10px;">
+        <tr>
+            <td class="label-t">
+                设备名称
+            </td>
+            <td>
+                <input id="txtMapName" type="text" class="easyui-validatebox" disabled="disabled"
+                    style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                设备编号
+            </td>
+            <td>
+                <input id="txtMapSN" type="text" class="easyui-validatebox" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                房间号
+            </td>
+            <td>
+                <select id="txtMapHouse" style="width: 180px">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                设备单价
+            </td>
+            <td>
+                <input id="txtMapPrice" type="text" class="easyui-numberbox" data-options="min:0,precision:2,required:true"
+                    style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                计费公式
+            </td>
+            <td>
+                <input id="txtMapExpression" type="text" class="easyui-validatebox" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t" colspan="2">
+                <div style="color: #f00; font-weight: bold;">
+                    *计算公式参数定义
+                </div>
+                <div style="color: #f00; font-weight: bold;">
+                    Price（设备单价）
+                </div>
+                <div style="color: #f00; font-weight: bold;">
+                    Day（天数），Days(合计天数)
+                </div>
+                <div style="color: #f00; font-weight: bold;">
+                    Hour（小时数），Hours（合计小时数）
+                </div>
+                <div style="color: #f00; font-weight: bold;">
+                    Minute（分钟数），Minutes（合计分钟数）
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="mm1" style="width: 100px;">
+    <div id="btnRepair">
+        设备报修</div>
+    @*  <div id="btnCompleteRepair">
+        维修完成</div>*@
+    <div id="btnDiscard">
+        设备报废</div>
+</div>
+<div id="repairForm" class="easyui-dialog" title="设备报修" iconcls="icon-save">
+    <table style="padding: 10px;">
+        <tr>
+            <td class="label-t">
+                报修原因
+            </td>
+            <td>
+                <textarea id="txtMemo" style="width: 200px; height: 150px"></textarea>
+                <input type="text" id="txtKey" style="display: none;" />
+            </td>
+        </tr>
+    </table>
+</div>

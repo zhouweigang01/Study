@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="THU.LabSystemBE.DeviceUseRecord,THU.LabSystemBE" table="T_LAB_DEVICE_USE_RECORD" dynamic-insert="true" dynamic-update="true">
+    <cache usage="read-write" />
+    <id name="ID" column="F_ID" type="Int64">
+      <generator class="assigned" />
+    </id>
+    <version name="SysVersion" column="F_SYSVERSION" type="integer" unsaved-value="0" />
+    <many-to-one name="Device" column="F_DEVICE" not-null="true" class="THU.LabSystemBE.DeviceMap,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_USE_RECORD_Device_DeviceMap" />
+    <property name="BeginTime" column="F_BEGINTIME" type="DateTime" />
+    <property name="EndTime" column="F_ENDTIME" type="DateTime" />
+    <property name="Fee" column="F_FEE" type="Decimal" />
+    <many-to-one name="User" column="F_USER" not-null="false" class="THU.LabSystemBE.User,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_USE_RECORD_User_User" />
+    <property name="IsAppoint" column="F_ISAPPOINT" type="Boolean" />
+    <many-to-one name="Teacher" column="F_TEACHER" not-null="true" class="THU.LabSystemBE.Teacher,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_USE_RECORD_Teacher_Teacher" />
+    <property name="IsCompleted" column="F_ISCOMPLETED" type="Boolean" />
+    <many-to-one name="House" column="F_HOUSE" not-null="true" class="THU.LabSystemBE.CommonEnum,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_USE_RECORD_House_CommonEnum" />
+    <property name="IsUsing" column="F_ISUSING" type="Boolean" />
+  </class>
+</hibernate-mapping>

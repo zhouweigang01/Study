@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "用户列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+    <script src="/Areas/Script/Admin/AdminConsole/UserList.js" type="text/javascript"></script>
+}
+<div data-options="region:'center'">
+    <table id="userList" class="easyui-datagrid" iconcls="icon-user" pagination="true"
+        data-options="fit:true,border:false">
+    </table>
+</div>
+<div data-options="region:'south',height:0.4">
+    <div class="easyui-tabs" data-options="fit:true,border:false">
+        <div title="惩罚历史">
+            <table id="forbitList" class="easyui-datagrid" iconcls="icon-user" data-options="fit:true,border:false">
+            </table>
+        </div>
+        <div title="登陆日志">
+            <table id="loggerList" class="easyui-datagrid" iconcls="icon-user" pagination="true"
+                data-options="fit:true,border:false">
+            </table>
+        </div>
+    </div>
+</div>
+<!--编辑界面-->
+<div id="editForm" class="easyui-dialog" title="新增用户" iconcls="icon-save">
+    <table style="padding: 10px;">
+        <tr>
+            <td class="label-t">
+                登录名
+            </td>
+            <td>
+                <input id="txtCode" type="text" style="width: 180px" /><span style="color: #f00;
+                    font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                密码
+            </td>
+            <td>
+                <input id="txtPassword" type="password" style="width: 180px" /><span style="color: #f00;
+                    font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                名称
+            </td>
+            <td>
+                <input id="txtName" type="text" style="width: 180px" /><span style="color: #f00;
+                    font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                学号
+            </td>
+            <td>
+                <input id="txtSN" type="text" style="width: 180px" /><span style="color: #f00; font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                邮箱
+            </td>
+            <td>
+                <input id="txtEmail" type="text" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                电话
+            </td>
+            <td>
+                <input id="txtTel" type="text" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                导师
+            </td>
+            <td>
+                <select id="txtTeacher" style="width: 180px">
+                </select><span style="color: #f00; font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                学历
+            </td>
+            <td>
+                <select id="txtDegree" class="easyui-combobox" style="width: 180px" editable="false">
+                </select><span style="color: #f00; font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                身份
+            </td>
+            <td>
+                <select id="txtStatus" class="easyui-combobox" style="width: 180px" editable="false">
+                </select><span style="color: #f00; font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                启用时间
+            </td>
+            <td>
+                <input id="txtBeginTime" type="text" style="width: 180px" /><span style="color: #f00;
+                    font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                停用时间
+            </td>
+            <td>
+                <input id="txtEndTime" type="text" style="width: 180px" /><span style="color: #f00;
+                    font-weight: bold">*</span>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="editForbitForm" class="easyui-dialog" title="新增惩罚记录" iconcls="icon-save">
+    <table style="padding: 10px;">
+        <tr>
+            <td class="label-t">
+                姓名
+            </td>
+            <td>
+                <input id="txtForbitName" type="text" disabled="disabled" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                开始时间
+            </td>
+            <td>
+                <input id="txtForbitBeginTime" type="text" style="width: 180px" class="easyui-datebox" /><span
+                    style="color: #f00; font-weight: bold">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                结束时间
+            </td>
+            <td>
+                <input id="txtForbitEndTime" type="text" style="width: 180px" class="easyui-datebox" /><span
+                    style="color: #f00; font-weight: bold">*</span>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCfg NS="THU.LabSystemBP">
+  <Refrences>
+    <Refrence Assembly="THU.LabSystemBE" />
+  </Refrences>
+  <Services>
+    <Service Name="InsertUserBP" />
+    <Service Name="GetUserListBP" />
+    <Service Name="ModifyUserBP" />
+    <Service Name="DeleteUserBP" />
+    <Service Name="ChangePasswordBP" />
+    <Service Name="InsertEnumBP" />
+    <Service Name="ModifyEnumBP" />
+    <Service Name="DeleteEnumBP" />
+    <Service Name="GetEnumListBP" />
+    <Service Name="ValidateUserBP" />
+    <Service Name="GetGroupEnumListBP" />
+    <Service Name="GetTeacherListBP" />
+    <Service Name="InsertTeacherBP" />
+    <Service Name="ModifyTeacherBP" />
+    <Service Name="DeleteTeacherBP" />
+    <Service Name="SearchTeacherListBP" />
+    <Service Name="SearchUserListBP" />
+    <Service Name="GetDeviceListBP" />
+    <Service Name="InsertDeviceBP" />
+    <Service Name="ModifyDeviceBP" />
+    <Service Name="DeleteDeviceBP" />
+    <Service Name="GetDeviceMapListBP" />
+    <Service Name="InsertDeviceMapBP" />
+    <Service Name="ModifyDeviceMapBP" />
+    <Service Name="DeleteDeviceMapBP" />
+    <Service Name="SearchDeviceListBP" />
+    <Service Name="SearchEnumListBP" />
+    <Service Name="ApplyRepairBP" />
+    <Service Name="RepairCompleteBP" />
+    <Service Name="DiscardDeviceBP" />
+    <Service Name="ApplyDeviceBP" />
+    <Service Name="AppointDeviceBP" />
+    <Service Name="GetLoggerListBP" />
+    <Service Name="SearchDeviceMapListBP" />
+    <Service Name="LoadDeviceMapRecordListBP" />
+    <Service Name="GetDeviceMapByHouseBP" />
+    <Service Name="GetAllDeviceMapBP" />
+    <Service Name="HandleRepairBP" />
+    <Service Name="GetDeviceRepairRecordBP" />
+    <Service Name="UseCompleteBP" />
+    <Service Name="DeleteAppointBP" />
+    <Service Name="AjustAppointBP" />
+    <Service Name="SynDeviceMapBP" />
+    <Service Name="GetDeviceUseRecordBP" />
+    <Service Name="ModifyRepairAlarmBP" />
+    <Service Name="GetDeviceUseReportBP" />
+    <Service Name="GetDeviceRepairReportBP" />
+    <Service Name="LoadDeviceUseDiagramBP" />
+    <Service Name="InsertForbitBP" />
+    <Service Name="ModifyForbitBP" />
+    <Service Name="DeleteForbitBP" />
+    <Service Name="GetForbitListBP" />
+  </Services>
+</ServiceCfg>

@@ -1,0 +1,41 @@
+﻿@model THU.LabSystem.Models.LogOnModel
+@{
+    ViewBag.Title = "登录";
+    Layout = "~/Views/Shared/_LayoutC.cshtml";
+}
+@section Head{
+    <link href="/Content/login/login.css" rel="stylesheet" type="text/css" />
+}
+@using (Html.BeginForm("LogOn", "Account"))
+{ 
+    @Html.ValidationSummary(true)
+    <div class="login-content">
+        <div class="loginbox-title">
+            <h3>
+                登录</h3>
+        </div>
+        <div class="row">
+            <label class="field">
+                用户名</label>
+            @Html.TextBoxFor(m => m.Code, new { @class = "input-text-user input-click" })
+            @Html.ValidationMessageFor(m => m.Code, "", new { @class = "input-text-val" })
+        </div>
+        <div class="row">
+            <label class="field">
+                密&nbsp;码</label>
+            @Html.PasswordFor(m => m.Password, new { @class = "input-text-password input-click" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "input-text-val" })
+        </div>
+        <div class="row btnArea">
+            <input type="submit" class="login-btn" value="登陆" />
+        </div>
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMsg))
+        {
+            <div class="row">
+                <label class="field" style="display: block; color: #f00; font-weight: bold">
+                    @ViewBag.ErrorMsg
+                </label>
+            </div>
+        }
+    </div>
+}

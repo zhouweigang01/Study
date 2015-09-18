@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "后台管理系统";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+    <link href="/Content/portal/portal.css" rel="stylesheet" type="text/css" />
+    <script src="/Areas/Script/Super/SuperConsole/Portal.js"></script>
+}
+<div region="north" border="false" style="height: 60px; background: rgb(228, 237, 254);">
+    <a class="logo" href="http://www.tsinghua.edu.cn/">
+        <img src="/Content/portal/logo.png" width="150" height="45" /></a><span style="margin: 20px 0px;
+            font-size: large; font-weight: bold;">设备管理系统 </span>
+    <div class="top-right">
+        <div class="top-text">
+            <span class="password"></span><a href="javascript:void(0)" id="sysPassword">修改密码</a><span
+                class="topcancel"> </span><a href="/Home/LogOut">安全退出</a>
+        </div>
+    </div>
+</div>
+<div region="center" title="">
+    <div class="easyui-tabs" fit="true" border="false" id="tabs">
+        <div title="我的桌面">
+        </div>
+    </div>
+</div>
+<div region="west" class="west" title="菜单">
+    <ul id="tree">
+    </ul>
+</div>
+<div id="tabsMenu" class="easyui-menu" style="width: 120px;">
+    <div name="close">
+        关闭
+    </div>
+    <div name="Other">
+        关闭其他
+    </div>
+    <div name="All">
+        关闭所有
+    </div>
+</div>
+<div id="editPwd" class="easyui-dialog" title="修改密码" iconcls="icon-edit">
+    <table style="padding: 10px;">
+        <tr>
+            <td class="label-t">
+                旧密码
+            </td>
+            <td>
+                <input id="txtPwd" class="easyui-validatebox" type="password" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                新密码
+            </td>
+            <td>
+                <input id="txtNewPwd" class="easyui-validatebox" type="password" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                确认密码
+            </td>
+            <td>
+                <input id="txtNewPwd1" class="easyui-validatebox" style="width: 180px" />
+            </td>
+        </tr>
+    </table>
+</div>

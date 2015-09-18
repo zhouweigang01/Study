@@ -1,0 +1,48 @@
+<Project DefaultTargets = "Compile"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <ItemGroup>
+    <Reference Include="NHExt.Runtime">
+<HintPath>..\..\..\Runtime\NHExt.Runtime.dll</HintPath>
+</Reference>
+<Reference Include="log4net">
+<HintPath>..\..\..\Runtime\log4net.dll</HintPath>
+</Reference>
+<Reference Include="NHibernate">
+<HintPath>..\..\..\Runtime\NHibernate.dll</HintPath>
+</Reference>
+<Reference Include="THU.LabSystemBE.Deploy">
+<HintPath>..\..\..\ApplicationLib\THU.LabSystemBE.Deploy.dll</HintPath>
+</Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\User.cs" />
+<Compile Include="Entity\CommonEnum.cs" />
+<Compile Include="Entity\Teacher.cs" />
+<Compile Include="Entity\DeviceMap.cs" />
+<Compile Include="Entity\DeviceUseRecord.cs" />
+<Compile Include="Entity\Device.cs" />
+<Compile Include="Entity\LoginLogger.cs" />
+<Compile Include="Entity\DeviceRepairRecord.cs" />
+<Compile Include="Entity\DeviceLog.cs" />
+<Compile Include="Entity\TypeEnum.cs" />
+<Compile Include="Entity\UserTypeEnum.cs" />
+<Compile Include="Entity\DeviceTypeEnum.cs" />
+<Compile Include="Entity\DeviceStatusEnum.cs" />
+<Compile Include="Entity\UseStatusEnum.cs" />
+<Compile Include="Entity\SexEnum.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigFiles\User.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\CommonEnum.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\Teacher.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\DeviceMap.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\DeviceUseRecord.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\Device.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\LoginLogger.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\DeviceRepairRecord.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\DeviceLog.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+
+  </ItemGroup>
+</Project>

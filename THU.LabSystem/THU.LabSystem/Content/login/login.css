@@ -1,0 +1,113 @@
+﻿
+body
+{
+    background: #D6E4FF url(homebg.png) no-repeat center top;
+}
+.login-head
+{
+    width: 420px;
+    margin: 80px auto 10px auto;
+}
+ 
+.login-content
+{
+    width: 400px;
+    margin: 0px auto;
+    background: #FFFFFF;
+    height: auto !important;
+    min-height: 100px;
+    height: 100px;
+    font-size: 14px;
+}
+.row
+{
+    height: 35px;
+    line-height: 22px;
+    position: relative;
+}
+.row label
+{
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+    color: #aaa;
+    padding-right: 10px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+.loginbox-title
+{
+    background: #FFFFFF;
+    height: 70px;
+    border-radius: 3px 3px 0 0;
+}
+.loginbox-title h3
+{
+    color: #666666;
+    padding: 0 20px;
+    line-height: 50px;
+    font-size: 16px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.login-content .row
+{
+    width: 380px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+.loginbox .login-content .btnArea
+{
+    padding: 0;
+    margin: 15px auto 5px auto;
+}
+.loginbox .login-content .row .field
+{
+    position: absolute;
+    left: 40px;
+    top: 23px;
+    height: 35px;
+    line-height: 35px;
+    pointer-events: none;
+}
+.input-text-user
+{
+    border: #D8D8D8 1px solid;
+    border-radius: 3px;
+    width: 220px;
+    padding-left: 40px;
+    height: 32px;
+    line-height: 32px;
+    background: white url(img.png) no-repeat 0px top;
+}
+.input-text-password
+{
+    border: #D8D8D8 1px solid;
+    border-radius: 3px;
+    width: 220px;
+    padding-left: 40px;
+    height: 32px;
+    line-height: 32px;
+    background: white url(img.png) no-repeat 0px -50px;
+}
+.login-btn
+{
+    display: block;
+    background: url(bg.png) repeat-x left top;
+    width: 300px;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #215A8D;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.input-text-val
+{
+    color: #f00;
+    font-weight: bold;
+}

@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "组织用户";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+    <script src="/Areas/Script/Super/SuperConsole/OrgUser.js" type="text/javascript"></script>
+}
+<div data-options="region:'west',width:0.4">
+    <table id="orgList" class="easyui-datagrid" iconcls="icon-org"  pagination="true" data-options="fit:true,border:false">
+    </table>
+</div>
+<div data-options="region:'center'">
+    <table id="userList" class="easyui-datagrid" iconcls="icon-user" data-options="fit:true,border:false">
+    </table>
+</div>
+<!--编辑界面-->
+<div id="editForm" class="easyui-dialog" title="新增组织管理员" iconcls="icon-save">
+    <table style="padding: 10px;">
+        <tr>
+            <td class="label-t">
+                登录名
+            </td>
+            <td>
+                <input id="txtCode" type="text" class="easyui-validatebox" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                登录密码
+            </td>
+            <td>
+                <input id="txtPassword" type="password" class="easyui-validatebox" style="width: 180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="label-t">
+                管理员姓名
+            </td>
+            <td>
+                <input id="txtName" type="text" class="easyui-validatebox" style="width: 180px" />
+            </td>
+        </tr>
+    </table>
+</div>

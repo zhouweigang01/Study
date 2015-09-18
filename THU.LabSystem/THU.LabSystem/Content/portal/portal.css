@@ -1,0 +1,223 @@
+﻿article, aside, figure, footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+.top-right
+{
+    overflow: hidden;
+    line-height: 30px;
+    color: #00a;
+    font-size: 15px;
+    font-family: Verdana, 微软雅黑,黑体;
+}
+
+.west
+{
+    width: 200px;
+    padding: 10px;
+}
+
+.north
+{
+    height: 100px;
+}
+
+.panel-body
+{
+    position: relative;
+}
+
+.panel-body iframe
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.top-right
+{
+    position: relative;
+    margin-top: 25px;
+    float: right;
+    color: #00a;
+    font-family: Verdana, 微软雅黑,黑体;
+}
+.top-text span
+{
+    line-height: 30px;
+    margin: 0 0 0 20px;
+    height: 35px;
+}
+.top-text a
+{
+    margin: 0 5px;
+    float: left;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.organizebt
+{
+    background: url(top-button-organize.png) no-repeat left 4px;
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+.topcancel
+{
+    background: url(top-button-cancel.png) no-repeat left 4px;
+    width: 32px;
+    height: 350px;
+    float: left;
+}
+.password
+{
+    background: url(top-button-password.png) no-repeat left 4px;
+    width: 32px;
+    height: 35px;
+    float: left;
+}
+.logo
+{
+    margin: 5px 30px 5px;
+    display: inline-block;
+}
+.copyright
+{
+    position: absolute;
+    left: 430px;
+    right: 300px;
+    text-align: center;
+    color: #f00;
+    font-weight:bold;
+    font-size: 10px;
+    top:40px;
+}
+.user
+{
+    background: url(top-button-user.png) no-repeat left 4px;
+    width: 18px;
+    height: 30px;
+    float: left;
+}
+
+.tab_box .datagrid-header td
+{
+    border-right: 1px dotted #ccc;
+    font-size: 14px;
+    font-weight: normal;
+    background: #fafafa;
+    border-bottom: 1px dotted #ccc;
+    border-top: 1px dotted #fff;
+    line-height: 20px;
+}
+.tab_box .datagrid-header
+{
+    overflow: hidden;
+    background: #fafafa;
+    border-bottom: 1px solid #ccc;
+    cursor: default;
+}
+.tab_box
+{
+    position: absolute;
+    top: 5px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+}
+.lyz_tab_left
+{
+    float: left;
+    width: 100px;
+    height: 4px;
+    position: relative;
+    z-index: 1;
+}
+.pro_con UL
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+    list-style-type: none;
+    position: absolute;
+}
+.pro_con UL LI
+{
+    background: #fff;
+    padding: 5px 20px;
+    display: inline;
+    font-size: 15px;
+    float: left;
+    width: 80px;
+    cursor: pointer;
+    color: #000;
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.pro_con UL LI.hover
+{
+    font-weight: bold;
+    border: 1px solid #aaa;
+    border-right: 0;
+    float: left;
+    color: #3c3c3c;
+    height: 20px;
+}
+.lyz_tab_right
+{
+    position: absolute;
+    top: 0px;
+    left: 120px;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+    border: 1px solid #aaa;
+    border-right: 0;
+    border-bottom: 0;
+}
+.lyz_tab_right > div
+{
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    border: 1px solid #aaa;
+}
+
+a.btn
+{
+    background: url(/Content/images/btn.gif) left 0;
+    color: #fff;
+    text-decoration: none;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+    margin: 0 5px 0 0;
+}
+a.btn-disable
+{
+    background: url(/Content/images/btn.gif) left -30px;
+    cursor: default;
+}
+
+a.btn span
+{
+    background: url(/Content/images/btn.gif) right 0;
+    padding: 5px 8px 5px 0;
+    margin: 0 0 0 8px;
+    float: left;
+    height: 16px;
+}
+a.btn-disable span
+{
+    background: url(/Content/images/btn.gif) right -30px;
+    color: #000;
+    padding: 5px 8px 5px 0;
+    margin: 0 0 0 8px;
+    height: 16px;
+}
+

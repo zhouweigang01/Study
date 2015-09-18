@@ -1,0 +1,324 @@
+<BPProj namespace="THU.LabSystemBP" Guid="ae9711fa-030d-482d-b0f2-70f559743b83" Name="实验室管理服务">
+  <BPList>
+    <BP Guid="6c075d31-b6ce-4cb2-8827-8bc4f10f5b34" Code="InsertUserBP" Name="新增用户" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="4c47c367-5698-4cae-81b0-eab071ce87ab" IsEntity="0" FloderGuid="2abf34f4-c32e-4364-bfc8-290c92cbd502">
+      <Attributes>
+        <Attribute Guid="7b65bc04-87a9-4d87-8132-0213cbba802d" Code="UserDTO" Name="用户实体DTO" DataType="RefreceType" RefGuid="4c47c367-5698-4cae-81b0-eab071ce87ab" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="a86f63b9-2790-43f7-be3c-0ca79f2e00ed" Code="GetUserListBP" Name="获取用户信息" List="0" Auth="0" Service="1" Trans="0" ReturnGuid="b9e90cf2-043a-4af8-8b23-e42a6d1e6ed9" IsEntity="0" FloderGuid="2abf34f4-c32e-4364-bfc8-290c92cbd502">
+      <Attributes>
+        <Attribute Guid="c6bd65b0-e4db-4c2f-987e-f89cac1ad663" Code="Type" Name="用户类别" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="56793f50-2aff-4d5b-8744-ee39b8267ac5" Code="PageSize" Name="页面数量" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="47330fbe-35c6-4d10-809d-7fea7cdd5532" Code="PageIndex" Name="页数" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="87c4a578-e808-4c24-8d77-a4552eb31417" Code="ID" Name="查询客户ID" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="1ae4227e-4fcc-48be-bb77-1b11717eb7ec" Code="ModifyUserBP" Name="修改用户" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="4c47c367-5698-4cae-81b0-eab071ce87ab" IsEntity="0" FloderGuid="2abf34f4-c32e-4364-bfc8-290c92cbd502">
+      <Attributes>
+        <Attribute Guid="cde4b5e4-fe3f-4875-8cf1-40cbeedcffce" Code="UserDTO" Name="用户信息DTO" DataType="RefreceType" RefGuid="4c47c367-5698-4cae-81b0-eab071ce87ab" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="46373bb5-f553-4378-b2bb-a22b23d8365b" Code="DeleteUserBP" Name="删除用户" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="2abf34f4-c32e-4364-bfc8-290c92cbd502">
+      <Attributes>
+        <Attribute Guid="77aed768-26cb-4584-873d-3cb24a92fea0" Code="ID" Name="用户ID" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="8967f922-6f53-41c8-afda-b70c52ffad96" Code="ChangePasswordBP" Name="修改密码" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="2abf34f4-c32e-4364-bfc8-290c92cbd502">
+      <Attributes>
+        <Attribute Guid="fd5d770d-9711-4e8d-b95e-2b23489ff487" Code="OPassword" Name="原密码" DataType="CommonType" Type="string" IsNull="0" />
+        <Attribute Guid="74bd631e-9218-4e9c-b2b7-d57d709ec5b2" Code="Password" Name="新密码" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="11b3f967-fee9-4cc5-8b8d-822e598a964b" Code="InsertEnumBP" Name="新增枚举" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="aa161d3b-4801-48f6-90b4-20f8ae57f853" IsEntity="0" FloderGuid="e49c7cb1-30f6-4467-984b-e2a30ef123fb">
+      <Attributes>
+        <Attribute Guid="0284b14f-85a5-4f36-a8ef-bf78129a6f7a" Code="EnumDTO" Name="枚举DTO" DataType="RefreceType" RefGuid="aa161d3b-4801-48f6-90b4-20f8ae57f853" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="7764b699-dfd1-4327-bdfc-2676e8e3b3ce" Code="ModifyEnumBP" Name="修改枚举" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="aa161d3b-4801-48f6-90b4-20f8ae57f853" IsEntity="0" FloderGuid="e49c7cb1-30f6-4467-984b-e2a30ef123fb">
+      <Attributes>
+        <Attribute Guid="24862236-5d1d-46ab-8f17-00dfe77c3b29" Code="EnumDTO" Name="修改枚举" DataType="RefreceType" RefGuid="aa161d3b-4801-48f6-90b4-20f8ae57f853" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="72f2b0ed-707c-47f2-b884-755beb908096" Code="DeleteEnumBP" Name="删除枚举" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="e49c7cb1-30f6-4467-984b-e2a30ef123fb">
+      <Attributes>
+        <Attribute Guid="55129bdf-65f0-4df3-bab2-38b009860a9c" Code="ID" Name="枚举ID" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="f190514a-8f3e-49af-b346-aa20e1ba26a9" Code="GetEnumListBP" Name="获取枚举" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="aa161d3b-4801-48f6-90b4-20f8ae57f853" IsEntity="0" FloderGuid="e49c7cb1-30f6-4467-984b-e2a30ef123fb">
+      <Attributes>
+        <Attribute Guid="b99b66c5-99b2-439f-b65b-8a4586753b95" Code="Type" Name="类别" DataType="CommonType" Type="int" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="3468e3f5-2977-495b-8a26-03a705ffc6e1" Code="ValidateUserBP" Name="验证用户" List="0" Auth="1" Service="1" Trans="0" FloderGuid="818b1375-db3f-46a6-83b6-bcaffaae7d6b" ReturnGuid="4c47c367-5698-4cae-81b0-eab071ce87ab" IsEntity="0">
+      <Attributes>
+        <Attribute Guid="9a4d8eea-039a-4a40-8a8f-8d8d94fe7fe1" Code="Code" Name="编码" DataType="CommonType" Type="string" IsNull="0" />
+        <Attribute Guid="3dd795e3-e30c-49c1-af8a-9c55fc94ff46" Code="Password" Name="密码" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="eda6bd82-3962-410c-a3de-e1f5075b2184" Code="GetGroupEnumListBP" Name="获取分组枚举" List="1" Auth="1" Service="1" Trans="0" FloderGuid="e49c7cb1-30f6-4467-984b-e2a30ef123fb" ReturnGuid="69f4f088-32c0-4c77-a1c4-a585f6c71501" IsEntity="0">
+      <Attributes>
+        <Attribute Guid="b53152e6-9a8c-4e6e-9eb8-8d1953a3e238" Code="TypeList" Name="类别列表" DataType="CompositionType" Type="int" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="713b1800-21f8-42b7-8385-ab38244474af" Code="GetTeacherListBP" Name="获取导师信息" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="66daf590-39cf-4f27-b265-a9f3f122a3e9" IsEntity="0" FloderGuid="eb575933-29a9-4b52-9528-db9a3de6165f">
+      <Attributes />
+    </BP>
+    <BP Guid="a5644821-0c25-4e48-9227-a4715a6d8a39" Code="InsertTeacherBP" Name="新增导师信息" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="66daf590-39cf-4f27-b265-a9f3f122a3e9" IsEntity="0" FloderGuid="eb575933-29a9-4b52-9528-db9a3de6165f">
+      <Attributes>
+        <Attribute Guid="ff58ec66-f9c2-4296-9388-08e9be0db45d" Code="TeacherDTO" Name="教师信息DTO" DataType="RefreceType" RefGuid="66daf590-39cf-4f27-b265-a9f3f122a3e9" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="514c1255-0d57-4bd1-9924-3150b9a28c0c" Code="ModifyTeacherBP" Name="修改导师信息" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="66daf590-39cf-4f27-b265-a9f3f122a3e9" IsEntity="0" FloderGuid="eb575933-29a9-4b52-9528-db9a3de6165f">
+      <Attributes>
+        <Attribute Guid="0af9c287-ce47-4696-9b9c-9f2b2eae30f2" Code="TeacherDTO" Name="教师信息DTO" DataType="RefreceType" RefGuid="66daf590-39cf-4f27-b265-a9f3f122a3e9" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="45d52a60-581e-44c9-b48d-4d80bd3ae6b4" Code="DeleteTeacherBP" Name="删除导师信息" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="eb575933-29a9-4b52-9528-db9a3de6165f">
+      <Attributes>
+        <Attribute Guid="fa6d708c-c148-4b74-b7aa-2a12957d3815" Code="ID" Name="导师ID" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="00c1911d-83df-4357-9af3-a22d7ee06c71" Code="SearchTeacherListBP" Name="教师信息查询" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="66daf590-39cf-4f27-b265-a9f3f122a3e9" IsEntity="0" FloderGuid="eb575933-29a9-4b52-9528-db9a3de6165f">
+      <Attributes>
+        <Attribute Guid="aacecb17-cacc-4563-8439-0fea5ccc67d4" Code="AttrubuteList" Name="过滤项" DataType="CompositionType" Type="string" IsNull="0" />
+        <Attribute Guid="94cbfd0b-ef4a-4462-bdd8-0dabf24f99c1" Code="SearchTxt" Name="搜索码" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="824120f7-c297-4e15-909b-ee343d5d29a4" Code="SearchUserListBP" Name="查询用户信息" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="4c47c367-5698-4cae-81b0-eab071ce87ab" IsEntity="0" FloderGuid="2abf34f4-c32e-4364-bfc8-290c92cbd502">
+      <Attributes>
+        <Attribute Guid="df6fc179-1f92-41a3-a04c-17e6c0887912" Code="AttrubuteList" Name="查询列" DataType="CompositionType" Type="string" IsNull="0" />
+        <Attribute Guid="34425ffc-e495-4727-b956-43953f828f7a" Code="SearchTxt" Name="查询值" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="9ac3a48e-22bd-4ecc-be05-e0e9453f58d6" Code="GetDeviceListBP" Name="获取设备" List="0" Auth="1" Service="1" Trans="0" ReturnGuid="0b7fe778-0c41-4e95-a175-9c11ab940304" IsEntity="0" FloderGuid="8a25124b-6dc0-456f-b840-761d6c887f55">
+      <Attributes>
+        <Attribute Guid="c8deee8d-83fb-4bc3-a48a-81693331d087" Code="Type" Name="设备类型" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="0b18f92c-8a34-407b-b821-68bb0ea6cc89" Code="ID" Name="设备ID" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="8a0ced93-8cde-4e44-a1bc-639bc15cf5ea" Code="PageSize" Name="大小" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="96d3236b-c7df-4ec2-85d1-be2f3a8b4f1a" Code="PageIndex" Name="页数" DataType="CommonType" Type="int" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="2afef3c2-9980-4959-be05-9de749403294" Code="InsertDeviceBP" Name="新增设备" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="ed7be607-7e7b-4976-b1bf-3f18efe5b9df" IsEntity="0" FloderGuid="8a25124b-6dc0-456f-b840-761d6c887f55">
+      <Attributes>
+        <Attribute Guid="97676711-5308-4069-80d6-8ebdc87216ee" Code="DeviceDTO" Name="设备DTO" DataType="RefreceType" RefGuid="ed7be607-7e7b-4976-b1bf-3f18efe5b9df" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="4a5808dc-2490-4a4c-ab5c-926532fa29a1" Code="ModifyDeviceBP" Name="修改设备" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="ed7be607-7e7b-4976-b1bf-3f18efe5b9df" IsEntity="0" FloderGuid="8a25124b-6dc0-456f-b840-761d6c887f55">
+      <Attributes>
+        <Attribute Guid="c11bd459-0bd2-4934-927f-23af85cda1e5" Code="DeviceDTO" Name="设备DTO" DataType="RefreceType" RefGuid="ed7be607-7e7b-4976-b1bf-3f18efe5b9df" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="56bc1236-acd9-4b78-81f5-0147f4eafcf8" Code="DeleteDeviceBP" Name="删除设备" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="8a25124b-6dc0-456f-b840-761d6c887f55">
+      <Attributes>
+        <Attribute Guid="9a6c99eb-795a-4a1d-82f0-ba1293efa9dd" Code="ID" Name="设备ID" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="3b5e22f1-cb7b-4c53-af40-b9689c7e1dd4" Code="GetDeviceMapListBP" Name="获取设备地图" List="1" Auth="1" Service="1" Trans="0" FloderGuid="1179dab9-4dcc-499b-bfd8-37fe1d124c32" ReturnGuid="3c5ffb16-361e-462e-b884-52b998b03d3e" IsEntity="0">
+      <Attributes>
+        <Attribute Guid="316b4387-0f27-46a1-90bb-d97f0ac434b4" Code="DeviceKey" Name="设备key" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="82606e37-cb5f-4f3e-a246-bfb03e227f48" Code="InsertDeviceMapBP" Name="新增设备地图" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="3c5ffb16-361e-462e-b884-52b998b03d3e" IsEntity="0" FloderGuid="1179dab9-4dcc-499b-bfd8-37fe1d124c32">
+      <Attributes>
+        <Attribute Guid="cb2df63d-5eec-4841-9a2a-0a7681fb01cc" Code="DeviceMapDTO" Name="设备地图DTO" DataType="RefreceType" RefGuid="3c5ffb16-361e-462e-b884-52b998b03d3e" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="1361c9d6-fcec-4534-8c26-f0402303a3f5" Code="ModifyDeviceMapBP" Name="修改设备地图" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="3c5ffb16-361e-462e-b884-52b998b03d3e" IsEntity="0" FloderGuid="1179dab9-4dcc-499b-bfd8-37fe1d124c32">
+      <Attributes>
+        <Attribute Guid="c57249b0-7be3-45a6-a704-d98414cf5909" Code="DeviceMapDTO" Name="设备地图DTO" DataType="RefreceType" RefGuid="3c5ffb16-361e-462e-b884-52b998b03d3e" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="c9ced2be-d8b8-44d3-9557-27e5e5aa5290" Code="DeleteDeviceMapBP" Name="删除设备地图" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="1179dab9-4dcc-499b-bfd8-37fe1d124c32">
+      <Attributes>
+        <Attribute Guid="b116d595-f166-456d-8755-857f4346c709" Code="ID" Name="设备地图KEY" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="c95eb1ec-df50-4168-a3bd-101422255242" Code="SearchDeviceListBP" Name="设备查询" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="ed7be607-7e7b-4976-b1bf-3f18efe5b9df" IsEntity="0" FloderGuid="8a25124b-6dc0-456f-b840-761d6c887f55">
+      <Attributes>
+        <Attribute Guid="ffc09fa0-1dbd-411a-8f5e-ca1d93509465" Code="AttrubuteList" Name="查询属性" DataType="CompositionType" Type="string" IsNull="0" />
+        <Attribute Guid="277f381a-aa6e-4362-97f1-6e91ea71999d" Code="SearchTxt" Name="查询字段" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="6793f911-e67f-40d3-a57d-eded2406846b" Code="SearchEnumListBP" Name="查询枚举信息" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="aa161d3b-4801-48f6-90b4-20f8ae57f853" IsEntity="0" FloderGuid="e49c7cb1-30f6-4467-984b-e2a30ef123fb">
+      <Attributes>
+        <Attribute Guid="e681c4cd-464f-4c8e-b2dd-5b50e8d98f1a" Code="Type" Name="类别" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="f05fcdc1-3b50-4544-b312-f0e6aa370978" Code="SearchTxt" Name="查询字符" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="6a9c9c5a-d949-47fd-adc4-65e5ec40c241" Code="ApplyRepairBP" Name="设备报修" List="0" Auth="1" Service="1" Trans="1" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f" ReturnName="bool">
+      <Attributes>
+        <Attribute Guid="23303e5b-6d0c-4cfd-b0e0-0140407e89fb" Code="ID" Name="设备地图" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="376454c9-c9e2-4c20-bc06-cc64f5f0ccc2" Code="Memo" Name="报修原因" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="36d07414-c958-4193-bdb8-7ecc9864c0a8" Code="RepairCompleteBP" Name="修理完成" List="0" Auth="1" Service="1" Trans="1" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f" ReturnName="bool">
+      <Attributes>
+        <Attribute Guid="73b1bde9-62dd-49bd-9fed-206a6fb2e4e9" Code="ID" Name="设备地图id" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="257aaa43-07e9-495a-a0ce-effda923b3a2" Code="Fee" Name="维修费用" DataType="CommonType" Type="decimal" IsNull="0" />
+        <Attribute Guid="4d61ef38-cfb3-418f-b96e-dffb8135834c" Code="Memo" Name="备注" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="11c64da9-5519-4f35-b0ad-f10d5972bffb" Code="DiscardDeviceBP" Name="设备报废" List="0" Auth="1" Service="1" Trans="1" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f" ReturnName="bool">
+      <Attributes>
+        <Attribute Guid="947d23c9-5316-4914-a278-eb9799d2a285" Code="ID" Name="设备id" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="9c63bdb4-d856-4e74-8c63-40b6a950497d" Code="ApplyDeviceBP" Name="设备申请" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="574aa9bc-55a0-464b-9507-0f66c4207a9d" IsEntity="0" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes>
+        <Attribute Guid="8de7ba6e-ce4a-46db-bc53-427944f169a1" Code="ID" Name="设备id" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="2d799aaa-a7a8-4cb9-8d2c-6808e3b48081" Code="AppointDeviceBP" Name="设备预约" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="574aa9bc-55a0-464b-9507-0f66c4207a9d" IsEntity="0" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes>
+        <Attribute Guid="16d38413-a6f5-414e-b0eb-6f633755af34" Code="ID" Name="设备号" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="c7a80034-c5b1-4e27-b3d4-5903290af943" Code="BeginTime" Name="开始时间" DataType="CommonType" Type="DateTime" IsNull="0" />
+        <Attribute Guid="b0017e38-dc68-4d24-9104-09380d22b699" Code="EndTime" Name="结束时间" DataType="CommonType" Type="DateTime" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="339abfc8-d75e-4831-b014-6afd4fb0596b" Code="GetLoggerListBP" Name="获取登陆日志" List="0" Auth="1" Service="1" Trans="1" FloderGuid="7c34ddc2-92e2-4d16-98ce-142ffde86561" ReturnGuid="6fae3273-bb8a-425f-8ac7-2b39e6fe6aa7" IsEntity="0">
+      <Attributes>
+        <Attribute Guid="b5173451-14cc-4d41-90b2-721f1e6a943e" Code="UserKey" Name="登陆用户" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="94edf600-8191-43c6-9ada-590b998bb3b8" Code="PageSize" Name="大小" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="953bf25c-499e-40d3-b351-bb5d78b4b1be" Code="PageIndex" Name="页数" DataType="CommonType" Type="int" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="a3d0af21-1184-4266-80c2-6d98d5d6c9b5" Code="SearchDeviceMapListBP" Name="查询设备地图" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="3c5ffb16-361e-462e-b884-52b998b03d3e" IsEntity="0" FloderGuid="1179dab9-4dcc-499b-bfd8-37fe1d124c32">
+      <Attributes>
+        <Attribute Guid="4a6e3bb6-6357-4eb6-b44f-ac14016b21fe" Code="AttrubuteList" Name="查询列表" DataType="CompositionType" Type="string" IsNull="0" />
+        <Attribute Guid="f626ab54-d0fd-4003-9ad2-8c60ed0f157d" Code="SearchTxt" Name="查询字符" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="afcbf8bb-f441-402f-8da9-ef42a56d523d" Code="LoadDeviceMapRecordListBP" Name="获取设备记录" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="574aa9bc-55a0-464b-9507-0f66c4207a9d" IsEntity="0" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes>
+        <Attribute Guid="04eeb2d2-2c52-4538-b21f-a4c52e4315ea" Code="Date" Name="日期" DataType="CommonType" Type="DateTime" IsNull="0" />
+        <Attribute Guid="d96f6644-0a47-4f66-86be-a955a16f6a2e" Code="DeviceKey" Name="设备key" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="2b6d6ec8-9e34-4021-8aac-290fe41c193c" Code="GetDeviceMapByHouseBP" Name="获取设备（根据房号）" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="3c5ffb16-361e-462e-b884-52b998b03d3e" IsEntity="0" FloderGuid="1179dab9-4dcc-499b-bfd8-37fe1d124c32">
+      <Attributes>
+        <Attribute Guid="b9b85d42-9ff5-492a-8d7f-087ada4550c9" Code="HouseKey" Name="房间号" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="119c272b-c053-4ff6-b533-274c1be1bcbf" Code="GetAllDeviceMapBP" Name="获取所有可用设备" List="0" Auth="1" Service="1" Trans="0" ReturnGuid="aeae937d-9a2f-4ff3-91dc-8e12094b1b40" IsEntity="0" FloderGuid="1179dab9-4dcc-499b-bfd8-37fe1d124c32">
+      <Attributes>
+        <Attribute Guid="f190e641-8d1c-463f-828c-2b2aac294e78" Code="PageSize" Name="页大小" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="8336019d-f842-4c79-8d62-0f6c4de5802c" Code="PageIndex" Name="也数量" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="b5a6639f-7e5c-4870-84d1-67f32304c0f1" Code="UseStatus" Name="使用状态" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="890b87eb-a5ef-419d-bd50-c3dfe3396f62" Code="DeviceStatus" Name="设备状态" DataType="CommonType" Type="int" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="e4193cb0-72d3-4e26-b1d8-959517db8c21" Code="HandleRepairBP" Name="处理报修" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes>
+        <Attribute Guid="de5a23e4-28d7-4cf5-9e4e-e120e17306f1" Code="ID" Name="报修记录" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="c8d10e0f-b653-4fd8-877d-6d32ac5a3fbd" Code="GetDeviceRepairRecordBP" Name="获取维修记录" List="0" Auth="1" Service="1" Trans="0" ReturnGuid="92369905-cf63-4553-b880-22b29bd87118" IsEntity="0" FloderGuid="b256c5aa-3e9d-423d-a5c9-7d361822d129">
+      <Attributes>
+        <Attribute Guid="9020cd6d-e1db-4b98-b40e-e6f5ca7a1674" Code="IsCompleted" Name="是否已完成" DataType="CommonType" Type="bool" IsNull="1" />
+        <Attribute Guid="46f44894-5b2b-46d1-a0a4-450480ec8e99" Code="PageSize" Name="大小" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="acd08ff8-6814-4f1a-a7da-dc25b94415d3" Code="PageIndex" Name="页数" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="0f3c1f24-c65a-479a-8e1c-cdcb64e0bf54" Code="UserKey" Name="用户key" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="91d3f29d-494e-4152-a079-6eb012b81154" Code="DeviceKey" Name="设备key" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="e778aafd-fbf2-42f6-8d0b-03878e0397ec" Code="UseCompleteBP" Name="设备使用完成" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes>
+        <Attribute Guid="18879576-b307-4950-a4b9-96f22f7afb01" Code="ID" Name="设备使用记录" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="4372f38f-d387-4115-853a-8bb558e076c8" Code="DeleteAppointBP" Name="删除预约" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes>
+        <Attribute Guid="947564c5-8648-4f16-94cd-3fdf7790e45d" Code="ID" Name="预约key" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="7af5e2f6-f0fd-46a8-80e7-afedc767b019" Code="AjustAppointBP" Name="调整预约" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes>
+        <Attribute Guid="eb56717c-9aea-4dc5-a571-a804f4f6924c" Code="ID" Name="预约记录" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="0bd8d2c8-f40c-4964-bd4b-3fb259c11fec" Code="EndTime" Name="结束时间" DataType="CommonType" Type="DateTime" IsNull="0" />
+        <Attribute Guid="b4711030-a1b8-46bf-97e3-e292fb6070d5" Code="BeginTime" Name="开始时间" DataType="CommonType" Type="DateTime" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="4cb37652-379a-48a7-a838-e625d7551521" Code="SynDeviceMapBP" Name="同步设备使用状态" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes />
+    </BP>
+    <BP Guid="aa91f016-d4a9-4232-a944-71c77ba748f6" Code="GetDeviceUseRecordBP" Name="获取使用记录" List="0" Auth="1" Service="1" Trans="0" ReturnGuid="54546552-e50c-4f57-b0d5-006d80d26c2a" IsEntity="0" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f">
+      <Attributes>
+        <Attribute Guid="a627b975-ee39-4e1d-9853-5e0727f0ddb5" Code="IsAppoint" Name="是否预约记录" DataType="CommonType" Type="bool" IsNull="0" />
+        <Attribute Guid="2b0cbb77-4bc5-4b41-a324-b384895ba855" Code="PageIndex" Name="页数" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="419f6768-0009-46d3-8511-eb07a7ca090d" Code="PageSize" Name="大小" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="3ba5e822-40b5-4edf-910e-7da0e6b1d101" Code="UserKey" Name="用户" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="5f31c0e9-e1dd-4525-b597-e0a4c78e5f62" Code="ModifyRepairAlarmBP" Name="修改维修记录提醒" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="b256c5aa-3e9d-423d-a5c9-7d361822d129">
+      <Attributes>
+        <Attribute Guid="a63c0a6d-70d1-4a31-9876-40e9d2b70c66" Code="ID" Name="维修记录key" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="88d0efa6-9ee0-4985-a484-cc62aca6f62c" Code="GetDeviceUseReportBP" Name="获取设备使用记录报表" List="0" Auth="1" Service="1" Trans="0" FloderGuid="24eafcd1-d2cf-421d-8535-ec4df0b0ba22" ReturnGuid="82eccfd7-ffcb-447e-8fb1-848ca1df6eff" IsEntity="0">
+      <Attributes>
+        <Attribute Guid="bdc6e6a9-c5be-4eec-a112-807e304054ff" Code="TeacherKey" Name="导师" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="5781e441-9f0e-4040-9dcd-fd6e4e3c350c" Code="Level" Name="层级" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="034a0544-99e7-4461-8ab6-7e112e2892ac" Code="PageSize" Name="页大小" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="c086956c-5bef-497d-90de-1af2ac276664" Code="PageIndex" Name="页数量" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="a2754643-9600-4fea-8324-d9b50d1e71d2" Code="StartTime" Name="开始时间" DataType="CommonType" Type="DateTime" IsNull="0" />
+        <Attribute Guid="f88584d8-b2b0-4ce1-8ef5-25bdfe3e16d5" Code="EndTime" Name="结束时间" DataType="CommonType" Type="DateTime" IsNull="0" />
+        <Attribute Guid="9827a6f5-9282-4b4b-8690-66745bd0ce9c" Code="OrderField" Name="排序字段" DataType="CommonType" Type="string" IsNull="0" />
+        <Attribute Guid="a6d3bb79-a894-49e6-b8dd-3b8abacab177" Code="DeviceKey" Name="设备KEY" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="71cd2d6f-e081-4b70-93f6-69dcf2d699ff" Code="GetDeviceRepairReportBP" Name="获取设备维修报表" List="0" Auth="1" Service="1" Trans="0" ReturnGuid="d9836c4e-86dd-4c32-8e52-19f6fd6c1bb2" IsEntity="0" FloderGuid="24eafcd1-d2cf-421d-8535-ec4df0b0ba22">
+      <Attributes>
+        <Attribute Guid="7b589557-8b3c-4875-b451-84b9a58d6226" Code="DeviceKey" Name="设备KEY" DataType="CommonType" Type="long" IsNull="0" />
+        <Attribute Guid="22e169a9-2386-43b6-b713-89af9a3487e7" Code="Level" Name="层级" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="15d0ba00-b7b2-418e-820b-e64e45fd9d76" Code="PageSize" Name="页大小" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="64f2c819-356b-449f-8408-e97138448ba3" Code="PageIndex" Name="页数" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="91a57c84-7a4f-44c2-b00a-64b35be0819c" Code="StartTime" Name="开始时间" DataType="CommonType" Type="DateTime" IsNull="0" />
+        <Attribute Guid="fe2354b1-a1f5-4bde-a739-b05a813b2ff4" Code="EndTime" Name="结束时间" DataType="CommonType" Type="DateTime" IsNull="0" />
+        <Attribute Guid="b3f38969-7329-4024-9d78-f079f63eeba8" Code="OrderField" Name="排序字段" DataType="CommonType" Type="string" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="d8db2c58-1137-4828-865a-d9b39c4e1646" Code="LoadDeviceUseDiagramBP" Name="获取使用柱形图" List="1" Auth="1" Service="1" Trans="0" FloderGuid="95a70515-4a83-4629-8f2c-874074f2d37f" ReturnGuid="91380dab-c473-4522-8db3-9a7d758de5e7" IsEntity="0">
+      <Attributes>
+        <Attribute Guid="282d93e8-162f-4c6c-97d8-6d969d59161f" Code="Year" Name="年" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="ef49297e-1a8c-4d39-b5dc-226ad4ad3b78" Code="Month" Name="月" DataType="CommonType" Type="int" IsNull="0" />
+        <Attribute Guid="48764426-61d6-412d-8929-ac2452badc7e" Code="IsAppoint" Name="是否预约" DataType="CommonType" Type="bool" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="eaa71d65-1a7e-4d1b-99e1-7b0e9262f270" Code="InsertForbitBP" Name="新增惩罚记录" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="84843ca3-f7d1-4ae2-8edd-4899f717670e" IsEntity="0" FloderGuid="2865e044-40d4-4d1e-8c95-ca7ceb8e5df9">
+      <Attributes>
+        <Attribute Guid="9bdc57de-62f9-492c-908b-2d24c9d75a35" Code="ForbitDTO" Name="惩罚记录" DataType="RefreceType" IsNull="0" RefGuid="84843ca3-f7d1-4ae2-8edd-4899f717670e" />
+      </Attributes>
+    </BP>
+    <BP Guid="4b09ae96-0be1-474e-b8af-9efaaf673ef3" Code="ModifyForbitBP" Name="修改惩罚记录" List="0" Auth="1" Service="1" Trans="1" ReturnGuid="84843ca3-f7d1-4ae2-8edd-4899f717670e" IsEntity="0" FloderGuid="2865e044-40d4-4d1e-8c95-ca7ceb8e5df9">
+      <Attributes>
+        <Attribute Guid="3a29b2aa-7d25-4a7e-b485-0e9a890fb6e3" Code="ForbitDTO" Name="惩罚记录DTO" DataType="RefreceType" RefGuid="84843ca3-f7d1-4ae2-8edd-4899f717670e" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="a4ea19f3-60e9-4f3c-a6f7-68ff3ce0e193" Code="DeleteForbitBP" Name="删除惩罚历史" List="0" Auth="1" Service="1" Trans="1" ReturnName="bool" FloderGuid="2865e044-40d4-4d1e-8c95-ca7ceb8e5df9">
+      <Attributes>
+        <Attribute Guid="3a1b7450-11b7-4e8e-9dd2-0adcca563d4c" Code="ID" Name="惩罚历史key" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+    <BP Guid="fd4cd3cb-452c-4493-a4c5-38eadb01919e" Code="GetForbitListBP" Name="获取惩罚列表" List="1" Auth="1" Service="1" Trans="0" ReturnGuid="84843ca3-f7d1-4ae2-8edd-4899f717670e" IsEntity="0" FloderGuid="2865e044-40d4-4d1e-8c95-ca7ceb8e5df9">
+      <Attributes>
+        <Attribute Guid="ffce0d62-81dc-4834-957b-e713226b6a2f" Code="UserKey" Name="用户key" DataType="CommonType" Type="long" IsNull="0" />
+      </Attributes>
+    </BP>
+  </BPList>
+  <RefrenceList>
+    <Refrence Guid="d3956a5c-68c9-47d6-849d-096980b350d8" RefProjName="实验室管理实体.be" RefrenceType="BEEntity" />
+    <Refrence Guid="86c2b4d4-0ff3-480a-bf0a-4d71bb9ba57e" RefProjName="实验室管理实体.be" RefrenceType="Deploy" />
+    <Refrence Guid="7b7abbea-0028-4850-ad7a-ce74e9516d95" RefProjName="实验室管理服务.bp" RefrenceType="Deploy" />
+  </RefrenceList>
+  <Floder Guid="2abf34f4-c32e-4364-bfc8-290c92cbd502" Name="用户信息" />
+  <Floder Guid="e49c7cb1-30f6-4467-984b-e2a30ef123fb" Name="通用枚举" />
+  <Floder Guid="818b1375-db3f-46a6-83b6-bcaffaae7d6b" Name="用户信息验证" />
+  <Floder Guid="eb575933-29a9-4b52-9528-db9a3de6165f" Name="导师信息" />
+  <Floder Guid="8a25124b-6dc0-456f-b840-761d6c887f55" Name="设备信息" />
+  <Floder Guid="1179dab9-4dcc-499b-bfd8-37fe1d124c32" Name="设备地图" />
+  <Floder Guid="95a70515-4a83-4629-8f2c-874074f2d37f" Name="设备使用记录" />
+  <Floder Guid="7c34ddc2-92e2-4d16-98ce-142ffde86561" Name="登陆日志" />
+  <Floder Guid="b256c5aa-3e9d-423d-a5c9-7d361822d129" Name="设备维修记录" />
+  <Floder Guid="24eafcd1-d2cf-421d-8535-ec4df0b0ba22" Name="统计报表" />
+  <Floder Guid="2865e044-40d4-4d1e-8c95-ca7ceb8e5df9" Name="惩罚记录" />
+</BPProj>

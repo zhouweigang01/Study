@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="THU.LabSystemBE.CommonEnum,THU.LabSystemBE" table="T_LAB_COMMON_ENUM" dynamic-insert="true" dynamic-update="true">
+    <cache usage="read-write" />
+    <id name="ID" column="F_ID" type="Int64">
+      <generator class="assigned" />
+    </id>
+    <version name="SysVersion" column="F_SYSVERSION" type="integer" unsaved-value="0" />
+    <property name="Name" column="F_NAME" type="String" length="100" />
+    <property name="Type" column="F_TYPE" type="THU.LabSystemBE.TypeEnum,THU.LabSystemBE" />
+    <property name="Code" column="F_CODE" type="String" length="100" />
+    <property name="IsDelete" column="F_ISDELETE" type="Boolean" />
+  </class>
+</hibernate-mapping>

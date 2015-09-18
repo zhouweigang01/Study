@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCfg NS="MVC.BlogBP">
+  <Refrences>
+    <Refrence Assembly="MVC.BlogBE" />
+  </Refrences>
+  <Services>
+    <Service Name="GetArticleListBP" />
+    <Service Name="GetArticleBP" />
+    <Service Name="InsertArticleBP" />
+    <Service Name="DeleteArticleBP" />
+    <Service Name="InsertSortTypeBP" />
+    <Service Name="ModifySortTypeBP" />
+    <Service Name="DeleteSortTypeBP" />
+    <Service Name="GetSortTypeListBP" />
+    <Service Name="ModifyArticleBP" />
+  </Services>
+</ServiceCfg>
