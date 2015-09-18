@@ -19,7 +19,10 @@ namespace THU.LabSystemBP
                 throw new Exception("当前设备还没有开始维修，维修完成操作失败");
             }
             repairRecord.Fee = this.Fee;
-            repairRecord.CompleteDate = DateTime.Now;
+            if (repairRecord.CompleteDate == null)
+            {
+                repairRecord.CompleteDate = DateTime.Now;
+            }
             repairRecord.IsCompleted = true;
             repairRecord.RepairMemo = this.Memo;
             if (repairRecord.Device.DeviceStatus != THU.LabSystemBE.DeviceStatusEnum.Discard)

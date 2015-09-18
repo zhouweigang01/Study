@@ -168,6 +168,9 @@ if(this.Status != null){
 	cloneObj.Status = null;
 }
 
+cloneObj.BizDate = this.BizDate;
+
+
 }
 
 /// <summary>
@@ -242,6 +245,23 @@ set{
   this.SetEnum<THU.LabSystemBE.DeviceStatusEnum>("Status",value);
 	}
 }
+/// <summary>
+/// 业务日期
+/// </summary>
+//private DateTime  _BizDate ;
+/// <summary>
+/// 业务日期
+/// </summary>
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="BizDate",Description = "业务日期",EntityRefrence=false,IsViewer=false,IsBizKey=false,IsNull=false)]
+public virtual DateTime BizDate
+{
+get{
+ return this.GetValue<DateTime>("BizDate");
+}
+set{
+this.SetValue<DateTime>("BizDate", value);}
+}
+
  public new virtual THU.LabSystemBE.Deploy.DeviceLogDTO ToDTO()
 	{
         THU.LabSystemBE.Deploy.DeviceLogDTO dto = new THU.LabSystemBE.Deploy.DeviceLogDTO();
@@ -265,6 +285,8 @@ protected virtual void ToDTO(THU.LabSystemBE.Deploy.DeviceLogDTO dto)
         {
            dto.Status = this.Status.EnumValue;
         }
+		dto.BizDate = this.BizDate;
+
 	
 	this.ToDTOImpl(dto);
 }
@@ -292,6 +314,8 @@ protected virtual void ToDTO(THU.LabSystemBE.Deploy.DeviceLogDTO dto)
 		{
 			entity.Status=(THU.LabSystemBE.DeviceStatusEnum)dto.Status;
 		}
+
+		entity.BizDate = dto.BizDate;
 
 		this.FromDTOImpl(dto);
 	}

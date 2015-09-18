@@ -58,6 +58,23 @@ set{
 this._Status=value;
 }
 }
+/// <summary>
+/// 业务日期
+/// </summary>
+private DateTime  _BizDate ;
+/// <summary>
+/// 业务日期
+/// </summary>
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="BizDate",Description = "业务日期",EntityRefrence=false,IsViewer=false)]
+public virtual DateTime  BizDate
+{
+get{
+return _BizDate;
+}
+set{
+this._BizDate=value;
+}
+}
 	public override void SetValue(object obj, string memberName)
 	{
 		switch(memberName){
@@ -69,6 +86,9 @@ case "Operator" :
 	break;
 case "Status" :
 	this._Status = this.TransferValue<int>(obj);
+	break;
+case "BizDate" :
+	this._BizDate = this.TransferValue<DateTime>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

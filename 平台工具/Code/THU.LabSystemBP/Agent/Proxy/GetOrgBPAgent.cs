@@ -54,7 +54,7 @@ public override object DoProxy()
 		aspect.BeforeDo(this,invoker.ParamList);
 	}
 	object obj = this.invoker.Do();
-	 result;
+	THU.LabSystemBE.Deploy.OrgDTO result;
 	if (this.invoker.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF)
 	{
 		string xml = string.Empty;
@@ -63,7 +63,7 @@ public override object DoProxy()
 		}
 		NHExt.Runtime.Logger.LoggerHelper.Info("远程wcf返回数据为:" + xml, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
 		try{
-			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<>(xml);
+			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<THU.LabSystemBE.Deploy.OrgDTO>(xml);
 		}
 		catch(Exception ex){
 			NHExt.Runtime.Logger.LoggerHelper.Error(ex, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
@@ -72,7 +72,7 @@ public override object DoProxy()
 	}
 	else
 	{
-		result= ()obj;
+		result= (THU.LabSystemBE.Deploy.OrgDTO)obj;
 	}
 	foreach (NHExt.Runtime.AOP.IAgentAspect aspect in aspectList)
 	{
@@ -82,9 +82,9 @@ public override object DoProxy()
 
 
 	}
-	public  Do()
+	public THU.LabSystemBE.Deploy.OrgDTO Do()
 	{
-		  obj = ( )this.DoProxy();
+		 THU.LabSystemBE.Deploy.OrgDTO obj = ( THU.LabSystemBE.Deploy.OrgDTO)this.DoProxy();
 		 return obj;
 	}
 

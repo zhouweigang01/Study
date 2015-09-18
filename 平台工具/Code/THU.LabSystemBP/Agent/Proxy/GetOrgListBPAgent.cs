@@ -36,7 +36,7 @@ public GetOrgListBPProxy()
 		aspect.BeforeDo(this,invoker.ParamList);
 	}
 	object obj = this.invoker.Do();
-	List<> result;
+	List<THU.LabSystemBE.Deploy.OrgDTO> result;
 	if (this.invoker.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF)
 	{
 		string xml = string.Empty;
@@ -45,7 +45,7 @@ public GetOrgListBPProxy()
 		}
 		NHExt.Runtime.Logger.LoggerHelper.Info("远程wcf返回数据为:" + xml, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
 		try{
-			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<List<>>(xml);
+			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<List<THU.LabSystemBE.Deploy.OrgDTO>>(xml);
 		}
 		catch(Exception ex){
 			NHExt.Runtime.Logger.LoggerHelper.Error(ex, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
@@ -54,7 +54,7 @@ public GetOrgListBPProxy()
 	}
 	else
 	{
-		result= (List<>)obj;
+		result= (List<THU.LabSystemBE.Deploy.OrgDTO>)obj;
 	}
 	foreach (NHExt.Runtime.AOP.IAgentAspect aspect in aspectList)
 	{
@@ -62,9 +62,9 @@ public GetOrgListBPProxy()
 	}
 	return result;
 	}
-	public List<> Do()
+	public List<THU.LabSystemBE.Deploy.OrgDTO> Do()
 	{
-		List<> obj = (List<>)this.DoProxy();
+		List<THU.LabSystemBE.Deploy.OrgDTO> obj = (List<THU.LabSystemBE.Deploy.OrgDTO>)this.DoProxy();
 		return obj;
 	}
 

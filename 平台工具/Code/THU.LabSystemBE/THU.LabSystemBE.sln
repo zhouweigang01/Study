@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{6dce3656-ce62-4d29-8f2c-c0b0380c1775}") = "THU.LabSystemBE.Deploy", "Deploy\THU.LabSystemBE.Deploy.csproj ", "{5829BADE-C10A-4B61-BAEF-904DC241E7D0}"
+Project("{cc4a0780-e6ce-4cea-9593-c20f12d193a6}") = "THU.LabSystemBE.Deploy", "Deploy\THU.LabSystemBE.Deploy.csproj ", "{5829BADE-C10A-4B61-BAEF-904DC241E7D0}"
 EndProject
-Project("{852144f9-8fb3-4838-b64e-4a17ec67a318}") = "THU.LabSystemBE", "BE\THU.LabSystemBE.csproj ", "{504586FA-0591-4939-921F-528C2B6182F1}"
+Project("{8674d715-f06e-4d6a-bccc-ef017def985c}") = "THU.LabSystemBE", "BE\THU.LabSystemBE.csproj ", "{504586FA-0591-4939-921F-528C2B6182F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

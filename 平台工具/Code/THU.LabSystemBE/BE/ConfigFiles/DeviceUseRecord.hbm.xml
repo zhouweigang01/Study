@@ -16,5 +16,7 @@
     <property name="IsCompleted" column="F_ISCOMPLETED" type="Boolean" />
     <many-to-one name="House" column="F_HOUSE" not-null="true" class="THU.LabSystemBE.CommonEnum,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_USE_RECORD_House_CommonEnum" />
     <property name="IsUsing" column="F_ISUSING" type="Boolean" />
+    <property name="Price" column="F_PRICE" type="Decimal" />
+    <property name="TotalTime" column="F_TOTALTIME" type="Double" />
   </class>
 </hibernate-mapping>

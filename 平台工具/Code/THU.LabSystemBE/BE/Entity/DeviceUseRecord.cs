@@ -195,6 +195,12 @@ if(this.House != null){
 cloneObj.IsUsing = this.IsUsing;
 
 
+cloneObj.Price = this.Price;
+
+
+cloneObj.TotalTime = this.TotalTime;
+
+
 }
 
 /// <summary>
@@ -415,6 +421,40 @@ set{
 this.SetValue<bool>("IsUsing", value);}
 }
 
+/// <summary>
+/// 单价
+/// </summary>
+//private decimal  _Price ;
+/// <summary>
+/// 单价
+/// </summary>
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="Price",Description = "单价",EntityRefrence=false,IsViewer=false,IsBizKey=false,IsNull=false)]
+public virtual decimal Price
+{
+get{
+ return this.GetValue<decimal>("Price");
+}
+set{
+this.SetValue<decimal>("Price", value);}
+}
+
+/// <summary>
+/// 使用时间
+/// </summary>
+//private double  _TotalTime ;
+/// <summary>
+/// 使用时间
+/// </summary>
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="TotalTime",Description = "使用时间",EntityRefrence=false,IsViewer=false,IsBizKey=false,IsNull=false)]
+public virtual double TotalTime
+{
+get{
+ return this.GetValue<double>("TotalTime");
+}
+set{
+this.SetValue<double>("TotalTime", value);}
+}
+
  public new virtual THU.LabSystemBE.Deploy.DeviceUseRecordDTO ToDTO()
 	{
         THU.LabSystemBE.Deploy.DeviceUseRecordDTO dto = new THU.LabSystemBE.Deploy.DeviceUseRecordDTO();
@@ -455,6 +495,10 @@ protected virtual void ToDTO(THU.LabSystemBE.Deploy.DeviceUseRecordDTO dto)
 		}
 
 		dto.IsUsing = this.IsUsing;
+
+		dto.Price = this.Price;
+
+		dto.TotalTime = this.TotalTime;
 
 	
 	this.ToDTOImpl(dto);
@@ -504,6 +548,10 @@ protected virtual void ToDTO(THU.LabSystemBE.Deploy.DeviceUseRecordDTO dto)
 		}
 
 		entity.IsUsing = dto.IsUsing;
+
+		entity.Price = dto.Price;
+
+		entity.TotalTime = dto.TotalTime;
 
 		this.FromDTOImpl(dto);
 	}

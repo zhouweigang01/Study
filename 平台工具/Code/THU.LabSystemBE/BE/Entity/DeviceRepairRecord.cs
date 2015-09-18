@@ -207,6 +207,9 @@ if(this.House != null){
 
 
 
+cloneObj.RepairMemo = this.RepairMemo;
+
+
 }
 
 /// <summary>
@@ -473,6 +476,23 @@ public virtual EntityKey<THU.LabSystemBE.CommonEnum> HouseKey
   }
 }
 
+/// <summary>
+/// 维修方式
+/// </summary>
+//private string  _RepairMemo ;
+/// <summary>
+/// 维修方式
+/// </summary>
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="RepairMemo",Description = "维修方式",EntityRefrence=false,IsViewer=false,IsBizKey=false,IsNull=true)]
+public virtual string RepairMemo
+{
+get{
+ return this.GetValue<string>("RepairMemo");
+}
+set{
+this.SetValue<string>("RepairMemo", value);}
+}
+
  public new virtual THU.LabSystemBE.Deploy.DeviceRepairRecordDTO ToDTO()
 	{
         THU.LabSystemBE.Deploy.DeviceRepairRecordDTO dto = new THU.LabSystemBE.Deploy.DeviceRepairRecordDTO();
@@ -520,6 +540,8 @@ protected virtual void ToDTO(THU.LabSystemBE.Deploy.DeviceRepairRecordDTO dto)
 		{
 			dto.House = this.HouseKey.ID;
 		}
+
+		dto.RepairMemo = this.RepairMemo;
 
 	
 	this.ToDTOImpl(dto);
@@ -578,6 +600,8 @@ protected virtual void ToDTO(THU.LabSystemBE.Deploy.DeviceRepairRecordDTO dto)
 		else {
 			entity.HouseKey = new EntityKey<THU.LabSystemBE.CommonEnum>(dto.House);
 		}
+
+		entity.RepairMemo = dto.RepairMemo;
 
 		this.FromDTOImpl(dto);
 	}

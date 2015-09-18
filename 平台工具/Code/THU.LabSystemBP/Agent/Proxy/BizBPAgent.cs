@@ -5,55 +5,38 @@ using System.Text;
 
 namespace THU.LabSystemBP.Agent
 {
-    public partial class InsertOrgBPProxy : NHExt.Runtime.Model.BizAgent
+    public partial class BizBPProxy : NHExt.Runtime.Model.BizAgent
     {
-		private string _guid ="4459585d-b205-4d0c-9b3a-8b05323edc14";
+		private string _guid ="c8d10e0f-b653-4fd8-877d-6d32ac5a3fbd";
 		public override string Guid {
 			get{
 				return _guid;
 			}
 		}
-		private string _proxyName = "THU.LabSystemBP.Agent.InsertOrgBPProxy";
+		private string _proxyName = "THU.LabSystemBP.Agent.BizBPProxy";
 		public override string ProxyName{
 			get{
 				return this._proxyName;
 			}
 		}
 
-/// <summary>
-/// 组织DTO
-/// </summary>
-private THU.LabSystemBE.Deploy.OrgDTO  _OrgDTO ;
-/// <summary>
-/// 组织DTO
-/// </summary>
-public virtual THU.LabSystemBE.Deploy.OrgDTO OrgDTO
-{
-get{
-return _OrgDTO;
-}
-set{
- _OrgDTO= value;
-}
-}
-public InsertOrgBPProxy()
+public BizBPProxy()
 {
 	this.invoker.RemoteIP = this.RemoteIP;
 	this.invoker.DllName = "THU.LabSystemBP.dll";
     this.invoker.NS = "THU.LabSystemBP";
-    this.invoker.ProxyName = "InsertOrgBP";
+    this.invoker.ProxyName = "BizBP";
 }
 
 public override object DoProxy()
 {
 	this.invoker.SourcePage = this.SourcePage;
-	this.invoker.ParamList.Add(this._OrgDTO);
 	List<NHExt.Runtime.AOP.IAgentAspect> aspectList = NHExt.Runtime.AOP.AspectManager.BuildAgentAspect(this.ProxyName);
 	foreach (NHExt.Runtime.AOP.IAgentAspect aspect in aspectList) {
 		aspect.BeforeDo(this,invoker.ParamList);
 	}
 	object obj = this.invoker.Do();
-	THU.LabSystemBE.Deploy.OrgDTO result;
+	void result;
 	if (this.invoker.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF)
 	{
 		string xml = string.Empty;
@@ -62,7 +45,7 @@ public override object DoProxy()
 		}
 		NHExt.Runtime.Logger.LoggerHelper.Info("远程wcf返回数据为:" + xml, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
 		try{
-			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<THU.LabSystemBE.Deploy.OrgDTO>(xml);
+			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<void>(xml);
 		}
 		catch(Exception ex){
 			NHExt.Runtime.Logger.LoggerHelper.Error(ex, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
@@ -71,7 +54,7 @@ public override object DoProxy()
 	}
 	else
 	{
-		result= (THU.LabSystemBE.Deploy.OrgDTO)obj;
+		result= (void)obj;
 	}
 	foreach (NHExt.Runtime.AOP.IAgentAspect aspect in aspectList)
 	{
@@ -81,22 +64,10 @@ public override object DoProxy()
 
 
 	}
-	public THU.LabSystemBE.Deploy.OrgDTO Do()
+	public void Do()
 	{
-		 THU.LabSystemBE.Deploy.OrgDTO obj = ( THU.LabSystemBE.Deploy.OrgDTO)this.DoProxy();
+		 void obj = ( void)this.DoProxy();
 		 return obj;
-	}
-
-	public override void SetValue(object obj, string memberName)
-	{
-		switch(memberName){
-case "OrgDTO" :
-	this._OrgDTO = this.TransferValue<THU.LabSystemBE.Deploy.OrgDTO>(obj);
-	break;
-		default:
-			base.SetValue(obj,memberName);
-			break;
-		}
 	}
 
  

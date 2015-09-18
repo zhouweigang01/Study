@@ -18,10 +18,11 @@ namespace THU.LabSystemBP
             else
             {
                 useRecord.IsCompleted = true;
-                if (!useRecord.IsAppoint)
-                {
-                    useRecord.EndTime = DateTime.Now;
-                }
+                //预约设备也可以报修
+                //if (!useRecord.IsAppoint)
+                //{
+                useRecord.EndTime = DateTime.Now;
+                // }
                 NHExt.Runtime.Session.Session.Current.Commit();
                 deviceMap = useRecord.Device;
             }

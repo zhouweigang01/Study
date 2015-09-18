@@ -5,15 +5,15 @@ using System.Text;
 
 namespace THU.LabSystemBP.Agent
 {
-    public partial class InsertOrgBPProxy : NHExt.Runtime.Model.BizAgent
+    public partial class DeviceUseCompleteBPProxy : NHExt.Runtime.Model.BizAgent
     {
-		private string _guid ="4459585d-b205-4d0c-9b3a-8b05323edc14";
+		private string _guid ="e778aafd-fbf2-42f6-8d0b-03878e0397ec";
 		public override string Guid {
 			get{
 				return _guid;
 			}
 		}
-		private string _proxyName = "THU.LabSystemBP.Agent.InsertOrgBPProxy";
+		private string _proxyName = "THU.LabSystemBP.Agent.DeviceUseCompleteBPProxy";
 		public override string ProxyName{
 			get{
 				return this._proxyName;
@@ -21,39 +21,40 @@ namespace THU.LabSystemBP.Agent
 		}
 
 /// <summary>
-/// 组织DTO
+/// 设备使用记录
 /// </summary>
-private THU.LabSystemBE.Deploy.OrgDTO  _OrgDTO ;
+private long  _ID ;
 /// <summary>
-/// 组织DTO
+/// 设备使用记录
 /// </summary>
-public virtual THU.LabSystemBE.Deploy.OrgDTO OrgDTO
+public virtual long ID
 {
 get{
-return _OrgDTO;
+return _ID;
 }
 set{
- _OrgDTO= value;
+ _ID= value;
 }
 }
-public InsertOrgBPProxy()
+
+public DeviceUseCompleteBPProxy()
 {
 	this.invoker.RemoteIP = this.RemoteIP;
 	this.invoker.DllName = "THU.LabSystemBP.dll";
     this.invoker.NS = "THU.LabSystemBP";
-    this.invoker.ProxyName = "InsertOrgBP";
+    this.invoker.ProxyName = "DeviceUseCompleteBP";
 }
 
 public override object DoProxy()
 {
 	this.invoker.SourcePage = this.SourcePage;
-	this.invoker.ParamList.Add(this._OrgDTO);
+	this.invoker.ParamList.Add(this._ID);
 	List<NHExt.Runtime.AOP.IAgentAspect> aspectList = NHExt.Runtime.AOP.AspectManager.BuildAgentAspect(this.ProxyName);
 	foreach (NHExt.Runtime.AOP.IAgentAspect aspect in aspectList) {
 		aspect.BeforeDo(this,invoker.ParamList);
 	}
 	object obj = this.invoker.Do();
-	THU.LabSystemBE.Deploy.OrgDTO result;
+	bool result;
 	if (this.invoker.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF)
 	{
 		string xml = string.Empty;
@@ -62,7 +63,7 @@ public override object DoProxy()
 		}
 		NHExt.Runtime.Logger.LoggerHelper.Info("远程wcf返回数据为:" + xml, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
 		try{
-			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<THU.LabSystemBE.Deploy.OrgDTO>(xml);
+			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<bool>(xml);
 		}
 		catch(Exception ex){
 			NHExt.Runtime.Logger.LoggerHelper.Error(ex, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
@@ -71,7 +72,7 @@ public override object DoProxy()
 	}
 	else
 	{
-		result= (THU.LabSystemBE.Deploy.OrgDTO)obj;
+		result= (bool)obj;
 	}
 	foreach (NHExt.Runtime.AOP.IAgentAspect aspect in aspectList)
 	{
@@ -81,17 +82,17 @@ public override object DoProxy()
 
 
 	}
-	public THU.LabSystemBE.Deploy.OrgDTO Do()
+	public bool Do()
 	{
-		 THU.LabSystemBE.Deploy.OrgDTO obj = ( THU.LabSystemBE.Deploy.OrgDTO)this.DoProxy();
+		 bool obj = ( bool)this.DoProxy();
 		 return obj;
 	}
 
 	public override void SetValue(object obj, string memberName)
 	{
 		switch(memberName){
-case "OrgDTO" :
-	this._OrgDTO = this.TransferValue<THU.LabSystemBE.Deploy.OrgDTO>(obj);
+case "ID" :
+	this._ID = this.TransferValue<long>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

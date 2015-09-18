@@ -18,5 +18,6 @@
     <property name="RepairDate" column="F_REPAIRDATE" type="DateTime" />
     <property name="AlarmUser" column="F_ALARMUSER" type="Boolean" />
     <many-to-one name="House" column="F_HOUSE" not-null="true" class="THU.LabSystemBE.CommonEnum,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_REPAIR_RECORD_House_CommonEnum" />
+    <property name="RepairMemo" column="F_REPAIRMEMO" type="String" length="100" />
   </class>
 </hibernate-mapping>

@@ -25,6 +25,7 @@
 <Compile Include="Entity\LoginLogger.cs" />
 <Compile Include="Entity\DeviceRepairRecord.cs" />
 <Compile Include="Entity\DeviceLog.cs" />
+<Compile Include="Entity\ForbidUser.cs" />
 <Compile Include="Entity\TypeEnum.cs" />
 <Compile Include="Entity\UserTypeEnum.cs" />
 <Compile Include="Entity\DeviceTypeEnum.cs" />
@@ -43,6 +44,7 @@
 <EmbeddedResource Include="ConfigFiles\LoginLogger.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
 <EmbeddedResource Include="ConfigFiles\DeviceRepairRecord.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
 <EmbeddedResource Include="ConfigFiles\DeviceLog.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
+<EmbeddedResource Include="ConfigFiles\ForbidUser.hbm.xml"><SubType>Designer</SubType></EmbeddedResource>
 
   </ItemGroup>
 </Project>

@@ -229,3 +229,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.xml
+*.xml
+平台工具/Code/THU.LabSystemBE/BE/ConfigFiles/DeviceLog.hbm.xml
+*.targets

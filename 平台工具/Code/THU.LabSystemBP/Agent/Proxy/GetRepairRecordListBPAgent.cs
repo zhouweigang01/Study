@@ -23,11 +23,11 @@ namespace THU.LabSystemBP.Agent
 /// <summary>
 /// 是否已完成
 /// </summary>
-private bool ? _IsCompleted ;
+private bool  _IsCompleted ;
 /// <summary>
 /// 是否已完成
 /// </summary>
-public virtual bool? IsCompleted
+public virtual bool IsCompleted
 {
 get{
 return _IsCompleted;
@@ -71,40 +71,6 @@ set{
 }
 }
 
-/// <summary>
-/// 用户key
-/// </summary>
-private long  _UserKey ;
-/// <summary>
-/// 用户key
-/// </summary>
-public virtual long UserKey
-{
-get{
-return _UserKey;
-}
-set{
- _UserKey= value;
-}
-}
-
-/// <summary>
-/// 设备key
-/// </summary>
-private long  _DeviceKey ;
-/// <summary>
-/// 设备key
-/// </summary>
-public virtual long DeviceKey
-{
-get{
-return _DeviceKey;
-}
-set{
- _DeviceKey= value;
-}
-}
-
 public GetRepairRecordListBPProxy()
 {
 	this.invoker.RemoteIP = this.RemoteIP;
@@ -119,8 +85,6 @@ public override object DoProxy()
 	this.invoker.ParamList.Add(this._IsCompleted);
 	this.invoker.ParamList.Add(this._PageSize);
 	this.invoker.ParamList.Add(this._PageIndex);
-	this.invoker.ParamList.Add(this._UserKey);
-	this.invoker.ParamList.Add(this._DeviceKey);
 	List<NHExt.Runtime.AOP.IAgentAspect> aspectList = NHExt.Runtime.AOP.AspectManager.BuildAgentAspect(this.ProxyName);
 	foreach (NHExt.Runtime.AOP.IAgentAspect aspect in aspectList) {
 		aspect.BeforeDo(this,invoker.ParamList);
@@ -164,19 +128,13 @@ public override object DoProxy()
 	{
 		switch(memberName){
 case "IsCompleted" :
-	this._IsCompleted = this.TransferValue<bool?>(obj);
+	this._IsCompleted = this.TransferValue<bool>(obj);
 	break;
 case "PageSize" :
 	this._PageSize = this.TransferValue<int>(obj);
 	break;
 case "PageIndex" :
 	this._PageIndex = this.TransferValue<int>(obj);
-	break;
-case "UserKey" :
-	this._UserKey = this.TransferValue<long>(obj);
-	break;
-case "DeviceKey" :
-	this._DeviceKey = this.TransferValue<long>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

@@ -177,6 +177,40 @@ set{
 this._IsUsing=value;
 }
 }
+/// <summary>
+/// 单价
+/// </summary>
+private decimal  _Price ;
+/// <summary>
+/// 单价
+/// </summary>
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="Price",Description = "单价",EntityRefrence=false,IsViewer=false)]
+public virtual decimal  Price
+{
+get{
+return _Price;
+}
+set{
+this._Price=value;
+}
+}
+/// <summary>
+/// 使用时间
+/// </summary>
+private double  _TotalTime ;
+/// <summary>
+/// 使用时间
+/// </summary>
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="TotalTime",Description = "使用时间",EntityRefrence=false,IsViewer=false)]
+public virtual double  TotalTime
+{
+get{
+return _TotalTime;
+}
+set{
+this._TotalTime=value;
+}
+}
 	public override void SetValue(object obj, string memberName)
 	{
 		switch(memberName){
@@ -209,6 +243,12 @@ case "House" :
 	break;
 case "IsUsing" :
 	this._IsUsing = this.TransferValue<bool>(obj);
+	break;
+case "Price" :
+	this._Price = this.TransferValue<decimal>(obj);
+	break;
+case "TotalTime" :
+	this._TotalTime = this.TransferValue<double>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

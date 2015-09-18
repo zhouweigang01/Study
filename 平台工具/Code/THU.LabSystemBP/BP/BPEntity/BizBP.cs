@@ -5,15 +5,15 @@ using System.Text;
 
 namespace THU.LabSystemBP
 {
-    public partial class GetOrgBP : NHExt.Runtime.Model.BizProxy
+    public partial class BizBP : NHExt.Runtime.Model.BizProxy
     {
-		private string _guid ="ebb0a369-5087-4e74-ab0b-dc7105a25e87";
+		private string _guid ="c8d10e0f-b653-4fd8-877d-6d32ac5a3fbd";
 		public override string Guid {
 			get{
 				return this._guid;
 			}
 		}
-		private string _proxyName = "THU.LabSystemBP.GetOrgBP";
+		private string _proxyName = "THU.LabSystemBP.BizBP";
 		public override string ProxyName{
 			get{
 				return this._proxyName;
@@ -28,24 +28,7 @@ namespace THU.LabSystemBP
 			}
 		}
 
-/// <summary>
-/// 组织id
-/// </summary>
-private long  _ID ;
-/// <summary>
-/// 组织id
-/// </summary>
-public virtual long ID
-{
-get{
-return _ID;
-}
-set{
- _ID= value;
-}
-}
-
-internal THU.LabSystemBE.Deploy.OrgDTO Do()
+internal void Do()
 {
     NHExt.Runtime.Proxy.ProxyContext ctx = new NHExt.Runtime.Proxy.ProxyContext();
     ctx.ProxyGuid = this._guid;
@@ -93,11 +76,11 @@ public override NHExt.Runtime.Model.WCFCallDTO DoWCF(NHExt.Runtime.Proxy.ProxyCo
 	callDTO.Result = xml;
 	return callDTO;
 }
-private THU.LabSystemBE.Deploy.OrgDTO DoCommon(NHExt.Runtime.Proxy.ProxyContext ctx)
+private void DoCommon(NHExt.Runtime.Proxy.ProxyContext ctx)
 {
 	Exception errEx = null;
 	try{
-		using (NHExt.Runtime.Session.Transaction trans = NHExt.Runtime.Session.Transaction.New(NHExt.Runtime.Enums.TransactionSupport.Support, ctx.UseReadDB))
+		using (NHExt.Runtime.Session.Transaction trans = NHExt.Runtime.Session.Transaction.New(NHExt.Runtime.Enums.TransactionSupport.Required, ctx.UseReadDB))
 		{
 			List<NHExt.Runtime.AOP.IProxyAspect> aspectList = new List<NHExt.Runtime.AOP.IProxyAspect>();
 			try
@@ -141,39 +124,10 @@ private THU.LabSystemBE.Deploy.OrgDTO DoCommon(NHExt.Runtime.Proxy.ProxyContext 
 	}
 }
 
-private THU.LabSystemBE.Deploy.OrgDTO TypeConvert(THU.LabSystemBE.Deploy.OrgDTO obj)
-{
-
-return obj;
-
-}
 protected override void InitParameter(NHExt.Runtime.Proxy.ProxyContext ctx){
 	base.InitParameter(ctx);
 	if(ctx != null){
-if(this.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF){
-	this._ID = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<long >(ctx.ParamList[0].ToString());
-	ctx.ParamList[0] = this._ID;
-}
-else{
-	if(ctx.ParamList.Count > 0){
-	this._ID = (long )ctx.ParamList[0];
-	}else{
-		ctx.ParamList.Add(this._ID);
 	}
 }
-	}
-}
-	public override void SetValue(object obj, string memberName)
-	{
-		switch(memberName){
-case "ID" :
-	this._ID = this.TransferValue<long>(obj);
-	break;
-		default:
-			base.SetValue(obj,memberName);
-			break;
-		}
-	}
-
 }
 }

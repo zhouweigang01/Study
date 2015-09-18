@@ -253,27 +253,22 @@ namespace THU.LabSystemBE
         private void OnUpdated()
         {
             //更新device状态
-            if (!this.IsAppoint)
+            //if (!this.IsAppoint)
+            //{
+
+            if (!this.IsUsing)
             {
-                string hql = "Device=${0}$ and IsCompleted=0 and IsAppoint=0 and ID !=${1}$";
+                string hql = "Device=${0}$ and IsUsing=1 and ID !=${1}$";
                 List<object> paramList = new List<object>();
                 paramList.Add(this.Device);
                 paramList.Add(this.ID);
                 DeviceUseRecord record = DeviceUseRecord.Finder.Find(hql, paramList);
                 if (record == null)
                 {
-                    //查看有没有预约使用的数据
-                    hql = "Device=${0}$ and IsCompleted=0 and IsAppoint=1 and BeginTime<=${1}$ and EndTime>=${1}$";
-                    paramList.Clear();
-                    paramList.Add(this.Device);
-                    paramList.Add(DateTime.Now);
-                    record = DeviceUseRecord.Finder.Find(hql, paramList);
-                    if (record == null)
-                    {
-                        this.Device.UseStatus = UseStatusEnum.Idle;
-                    }
+                    this.Device.UseStatus = UseStatusEnum.Idle;
                 }
             }
+            // }
 
         }
         private void OnDeleting()

@@ -211,6 +211,23 @@ set{
 this._House=value;
 }
 }
+/// <summary>
+/// 维修方式
+/// </summary>
+private string  _RepairMemo ;
+/// <summary>
+/// 维修方式
+/// </summary>
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="RepairMemo",Description = "维修方式",EntityRefrence=false,IsViewer=false)]
+public virtual string  RepairMemo
+{
+get{
+return _RepairMemo;
+}
+set{
+this._RepairMemo=value;
+}
+}
 	public override void SetValue(object obj, string memberName)
 	{
 		switch(memberName){
@@ -249,6 +266,9 @@ case "AlarmUser" :
 	break;
 case "House" :
 	this._House = this.TransferValue<long>(obj);
+	break;
+case "RepairMemo" :
+	this._RepairMemo = this.TransferValue<string>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

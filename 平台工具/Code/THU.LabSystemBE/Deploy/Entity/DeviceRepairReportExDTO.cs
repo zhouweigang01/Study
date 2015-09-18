@@ -5,7 +5,7 @@ using System.Text;
 using NHExt.Runtime.Model;
 namespace THU.LabSystemBE.Deploy{
  [Serializable]
-public partial class DeviceExDTO : NHExt.Runtime.Model.BaseDTO
+public partial class DeviceRepairReportExDTO : NHExt.Runtime.Model.BaseDTO
 {
 /// <summary>
 /// 数量
@@ -27,12 +27,12 @@ this._ListCount=value;
 /// <summary>
 /// 数据
 /// </summary>
-private List<THU.LabSystemBE.Deploy.DeviceDTO> _ListData = new List<THU.LabSystemBE.Deploy.DeviceDTO>();
+private List<THU.LabSystemBE.Deploy.DeviceRepairReportDTO> _ListData = new List<THU.LabSystemBE.Deploy.DeviceRepairReportDTO>();
 /// <summary>
 /// 数据
 /// </summary>
 [NHExt.Runtime.EntityAttribute.ColumnDescription(Code="ListData",Description = "数据",EntityRefrence=true,IsViewer=false)]
-public virtual List<THU.LabSystemBE.Deploy.DeviceDTO> ListData
+public virtual List<THU.LabSystemBE.Deploy.DeviceRepairReportDTO> ListData
 {
    get { 
    return _ListData; 
@@ -48,7 +48,7 @@ case "ListCount" :
 	this._ListCount = this.TransferValue<int>(obj);
 	break;
 case "ListData" :
-	this._ListData = this.TransferValue<List<THU.LabSystemBE.Deploy.DeviceDTO> >(obj);
+	this._ListData = this.TransferValue<List<THU.LabSystemBE.Deploy.DeviceRepairReportDTO> >(obj);
 	break;
 
 		default:

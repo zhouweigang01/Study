@@ -9,5 +9,6 @@
     <many-to-one name="Device" column="F_DEVICE" not-null="true" class="THU.LabSystemBE.DeviceMap,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_LOG_Device_DeviceMap" />
     <many-to-one name="Operator" column="F_OPERATOR" not-null="true" class="THU.LabSystemBE.User,THU.LabSystemBE" foreign-key="FK_T_LAB_DEVICE_LOG_Operator_User" />
     <property name="Status" column="F_STATUS" type="THU.LabSystemBE.DeviceStatusEnum,THU.LabSystemBE" />
+    <property name="BizDate" column="F_BIZDATE" type="DateTime" />
   </class>
 </hibernate-mapping>

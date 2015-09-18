@@ -27,18 +27,18 @@ public virtual List<THU.LabSystemBE.Deploy.UserDTO> ListData
 /// <summary>
 /// 用户数量
 /// </summary>
-private int  _Count ;
+private int  _ListCount ;
 /// <summary>
 /// 用户数量
 /// </summary>
-[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="Count",Description = "用户数量",EntityRefrence=false,IsViewer=false)]
-public virtual int  Count
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="ListCount",Description = "用户数量",EntityRefrence=false,IsViewer=false)]
+public virtual int  ListCount
 {
 get{
-return _Count;
+return _ListCount;
 }
 set{
-this._Count=value;
+this._ListCount=value;
 }
 }
 	public override void SetValue(object obj, string memberName)
@@ -48,8 +48,8 @@ case "ListData" :
 	this._ListData = this.TransferValue<List<THU.LabSystemBE.Deploy.UserDTO> >(obj);
 	break;
 
-case "Count" :
-	this._Count = this.TransferValue<int>(obj);
+case "ListCount" :
+	this._ListCount = this.TransferValue<int>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

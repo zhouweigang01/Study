@@ -5,15 +5,15 @@ using System.Text;
 
 namespace THU.LabSystemBP
 {
-    public partial class GetOrgBP : NHExt.Runtime.Model.BizProxy
+    public partial class GetAdminUserBP : NHExt.Runtime.Model.BizProxy
     {
-		private string _guid ="ebb0a369-5087-4e74-ab0b-dc7105a25e87";
+		private string _guid ="3a83728b-cc0f-46ff-ac5a-25737c996c4a";
 		public override string Guid {
 			get{
 				return this._guid;
 			}
 		}
-		private string _proxyName = "THU.LabSystemBP.GetOrgBP";
+		private string _proxyName = "THU.LabSystemBP.GetAdminUserBP";
 		public override string ProxyName{
 			get{
 				return this._proxyName;
@@ -29,23 +29,57 @@ namespace THU.LabSystemBP
 		}
 
 /// <summary>
-/// 组织id
+/// 关联组织key
 /// </summary>
-private long  _ID ;
+private long  _OrgKey ;
 /// <summary>
-/// 组织id
+/// 关联组织key
 /// </summary>
-public virtual long ID
+public virtual long OrgKey
 {
 get{
-return _ID;
+return _OrgKey;
 }
 set{
- _ID= value;
+ _OrgKey= value;
 }
 }
 
-internal THU.LabSystemBE.Deploy.OrgDTO Do()
+/// <summary>
+/// 页大小
+/// </summary>
+private int  _PageSize ;
+/// <summary>
+/// 页大小
+/// </summary>
+public virtual int PageSize
+{
+get{
+return _PageSize;
+}
+set{
+ _PageSize= value;
+}
+}
+
+/// <summary>
+/// 页数
+/// </summary>
+private int  _PageIndex ;
+/// <summary>
+/// 页数
+/// </summary>
+public virtual int PageIndex
+{
+get{
+return _PageIndex;
+}
+set{
+ _PageIndex= value;
+}
+}
+
+internal THU.LabSystemBE.Deploy.UserExDTO Do()
 {
     NHExt.Runtime.Proxy.ProxyContext ctx = new NHExt.Runtime.Proxy.ProxyContext();
     ctx.ProxyGuid = this._guid;
@@ -93,7 +127,7 @@ public override NHExt.Runtime.Model.WCFCallDTO DoWCF(NHExt.Runtime.Proxy.ProxyCo
 	callDTO.Result = xml;
 	return callDTO;
 }
-private THU.LabSystemBE.Deploy.OrgDTO DoCommon(NHExt.Runtime.Proxy.ProxyContext ctx)
+private THU.LabSystemBE.Deploy.UserExDTO DoCommon(NHExt.Runtime.Proxy.ProxyContext ctx)
 {
 	Exception errEx = null;
 	try{
@@ -141,7 +175,7 @@ private THU.LabSystemBE.Deploy.OrgDTO DoCommon(NHExt.Runtime.Proxy.ProxyContext 
 	}
 }
 
-private THU.LabSystemBE.Deploy.OrgDTO TypeConvert(THU.LabSystemBE.Deploy.OrgDTO obj)
+private THU.LabSystemBE.Deploy.UserExDTO TypeConvert(THU.LabSystemBE.Deploy.UserExDTO obj)
 {
 
 return obj;
@@ -151,14 +185,36 @@ protected override void InitParameter(NHExt.Runtime.Proxy.ProxyContext ctx){
 	base.InitParameter(ctx);
 	if(ctx != null){
 if(this.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF){
-	this._ID = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<long >(ctx.ParamList[0].ToString());
-	ctx.ParamList[0] = this._ID;
+	this._OrgKey = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<long >(ctx.ParamList[0].ToString());
+	ctx.ParamList[0] = this._OrgKey;
 }
 else{
 	if(ctx.ParamList.Count > 0){
-	this._ID = (long )ctx.ParamList[0];
+	this._OrgKey = (long )ctx.ParamList[0];
 	}else{
-		ctx.ParamList.Add(this._ID);
+		ctx.ParamList.Add(this._OrgKey);
+	}
+}
+if(this.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF){
+	this._PageSize = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<int >(ctx.ParamList[1].ToString());
+	ctx.ParamList[1] = this._PageSize;
+}
+else{
+	if(ctx.ParamList.Count > 1){
+	this._PageSize = (int )ctx.ParamList[1];
+	}else{
+		ctx.ParamList.Add(this._PageSize);
+	}
+}
+if(this.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF){
+	this._PageIndex = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<int >(ctx.ParamList[2].ToString());
+	ctx.ParamList[2] = this._PageIndex;
+}
+else{
+	if(ctx.ParamList.Count > 2){
+	this._PageIndex = (int )ctx.ParamList[2];
+	}else{
+		ctx.ParamList.Add(this._PageIndex);
 	}
 }
 	}
@@ -166,8 +222,14 @@ else{
 	public override void SetValue(object obj, string memberName)
 	{
 		switch(memberName){
-case "ID" :
-	this._ID = this.TransferValue<long>(obj);
+case "OrgKey" :
+	this._OrgKey = this.TransferValue<long>(obj);
+	break;
+case "PageSize" :
+	this._PageSize = this.TransferValue<int>(obj);
+	break;
+case "PageIndex" :
+	this._PageIndex = this.TransferValue<int>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

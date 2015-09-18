@@ -23,11 +23,11 @@ namespace THU.LabSystemBP.Agent
 /// <summary>
 /// 组织DTO
 /// </summary>
-private   _OrgDTO ;
+private THU.LabSystemBE.Deploy.OrgDTO  _OrgDTO ;
 /// <summary>
 /// 组织DTO
 /// </summary>
-public virtual  OrgDTO
+public virtual THU.LabSystemBE.Deploy.OrgDTO OrgDTO
 {
 get{
 return _OrgDTO;
@@ -53,7 +53,7 @@ public override object DoProxy()
 		aspect.BeforeDo(this,invoker.ParamList);
 	}
 	object obj = this.invoker.Do();
-	 result;
+	THU.LabSystemBE.Deploy.OrgDTO result;
 	if (this.invoker.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF)
 	{
 		string xml = string.Empty;
@@ -62,7 +62,7 @@ public override object DoProxy()
 		}
 		NHExt.Runtime.Logger.LoggerHelper.Info("远程wcf返回数据为:" + xml, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
 		try{
-			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<>(xml);
+			result = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<THU.LabSystemBE.Deploy.OrgDTO>(xml);
 		}
 		catch(Exception ex){
 			NHExt.Runtime.Logger.LoggerHelper.Error(ex, NHExt.Runtime.Logger.LoggerInstance.RuntimeLogger);
@@ -71,7 +71,7 @@ public override object DoProxy()
 	}
 	else
 	{
-		result= ()obj;
+		result= (THU.LabSystemBE.Deploy.OrgDTO)obj;
 	}
 	foreach (NHExt.Runtime.AOP.IAgentAspect aspect in aspectList)
 	{
@@ -81,9 +81,9 @@ public override object DoProxy()
 
 
 	}
-	public  Do()
+	public THU.LabSystemBE.Deploy.OrgDTO Do()
 	{
-		  obj = ( )this.DoProxy();
+		 THU.LabSystemBE.Deploy.OrgDTO obj = ( THU.LabSystemBE.Deploy.OrgDTO)this.DoProxy();
 		 return obj;
 	}
 
@@ -91,7 +91,7 @@ public override object DoProxy()
 	{
 		switch(memberName){
 case "OrgDTO" :
-	this._OrgDTO = this.TransferValue<>(obj);
+	this._OrgDTO = this.TransferValue<THU.LabSystemBE.Deploy.OrgDTO>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

@@ -16,6 +16,7 @@
 <Compile Include="Entity\LoginLoggerDTO.cs" />
 <Compile Include="Entity\DeviceRepairRecordDTO.cs" />
 <Compile Include="Entity\DeviceLogDTO.cs" />
+<Compile Include="Entity\ForbidUserDTO.cs" />
 <Compile Include="Entity\UserExDTO.cs" />
 <Compile Include="Entity\GroupEnumDTO.cs" />
 <Compile Include="Entity\DeviceExDTO.cs" />
@@ -23,6 +24,11 @@
 <Compile Include="Entity\DeviceMapExDTO.cs" />
 <Compile Include="Entity\DeviceRepairExDTO.cs" />
 <Compile Include="Entity\DeviceUseExDTO.cs" />
+<Compile Include="Entity\DeviceUseReportDTO.cs" />
+<Compile Include="Entity\DeviceRepairReportDTO.cs" />
+<Compile Include="Entity\DeviceUseReportExDTO.cs" />
+<Compile Include="Entity\DeviceRepairReportExDTO.cs" />
+<Compile Include="Entity\DeviceUseDiagramDTO.cs" />
 <Compile Include="Entity\TypeEnumDTO.cs" />
 <Compile Include="Entity\UserTypeEnumDTO.cs" />
 <Compile Include="Entity\DeviceTypeEnumDTO.cs" />

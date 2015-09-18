@@ -31,11 +31,11 @@ namespace THU.LabSystemBP
 /// <summary>
 /// 组织DTO
 /// </summary>
-private   _OrgDTO ;
+private THU.LabSystemBE.Deploy.OrgDTO  _OrgDTO ;
 /// <summary>
 /// 组织DTO
 /// </summary>
-public virtual  OrgDTO
+public virtual THU.LabSystemBE.Deploy.OrgDTO OrgDTO
 {
 get{
 return _OrgDTO;
@@ -44,7 +44,7 @@ set{
  _OrgDTO= value;
 }
 }
-internal  Do()
+internal THU.LabSystemBE.Deploy.OrgDTO Do()
 {
     NHExt.Runtime.Proxy.ProxyContext ctx = new NHExt.Runtime.Proxy.ProxyContext();
     ctx.ProxyGuid = this._guid;
@@ -92,7 +92,7 @@ public override NHExt.Runtime.Model.WCFCallDTO DoWCF(NHExt.Runtime.Proxy.ProxyCo
 	callDTO.Result = xml;
 	return callDTO;
 }
-private  DoCommon(NHExt.Runtime.Proxy.ProxyContext ctx)
+private THU.LabSystemBE.Deploy.OrgDTO DoCommon(NHExt.Runtime.Proxy.ProxyContext ctx)
 {
 	Exception errEx = null;
 	try{
@@ -140,7 +140,7 @@ private  DoCommon(NHExt.Runtime.Proxy.ProxyContext ctx)
 	}
 }
 
-private  TypeConvert( obj)
+private THU.LabSystemBE.Deploy.OrgDTO TypeConvert(THU.LabSystemBE.Deploy.OrgDTO obj)
 {
 
 return obj;
@@ -150,12 +150,12 @@ protected override void InitParameter(NHExt.Runtime.Proxy.ProxyContext ctx){
 	base.InitParameter(ctx);
 	if(ctx != null){
 if(this.CallerType == NHExt.Runtime.Session.CallerTypeEnum.WCF){
-	this._OrgDTO = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize< >(ctx.ParamList[0].ToString());
+	this._OrgDTO = NHExt.Runtime.Serialize.XmlSerialize.DeSerialize<THU.LabSystemBE.Deploy.OrgDTO >(ctx.ParamList[0].ToString());
 	ctx.ParamList[0] = this._OrgDTO;
 }
 else{
 	if(ctx.ParamList.Count > 0){
-	this._OrgDTO = ( )ctx.ParamList[0];
+	this._OrgDTO = (THU.LabSystemBE.Deploy.OrgDTO )ctx.ParamList[0];
 	}else{
 		ctx.ParamList.Add(this._OrgDTO);
 	}
@@ -166,7 +166,7 @@ else{
 	{
 		switch(memberName){
 case "OrgDTO" :
-	this._OrgDTO = this.TransferValue<>(obj);
+	this._OrgDTO = this.TransferValue<THU.LabSystemBE.Deploy.OrgDTO>(obj);
 	break;
 		default:
 			base.SetValue(obj,memberName);

@@ -10,18 +10,18 @@ public partial class DeviceUseExDTO : NHExt.Runtime.Model.BaseDTO
 /// <summary>
 /// 数量
 /// </summary>
-private int  _Count ;
+private int  _ListCount ;
 /// <summary>
 /// 数量
 /// </summary>
-[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="Count",Description = "数量",EntityRefrence=false,IsViewer=false)]
-public virtual int  Count
+[NHExt.Runtime.EntityAttribute.ColumnDescription(Code="ListCount",Description = "数量",EntityRefrence=false,IsViewer=false)]
+public virtual int  ListCount
 {
 get{
-return _Count;
+return _ListCount;
 }
 set{
-this._Count=value;
+this._ListCount=value;
 }
 }
 /// <summary>
@@ -44,8 +44,8 @@ public virtual List<THU.LabSystemBE.Deploy.DeviceUseRecordDTO> ListData
 	public override void SetValue(object obj, string memberName)
 	{
 		switch(memberName){
-case "Count" :
-	this._Count = this.TransferValue<int>(obj);
+case "ListCount" :
+	this._ListCount = this.TransferValue<int>(obj);
 	break;
 case "ListData" :
 	this._ListData = this.TransferValue<List<THU.LabSystemBE.Deploy.DeviceUseRecordDTO> >(obj);
